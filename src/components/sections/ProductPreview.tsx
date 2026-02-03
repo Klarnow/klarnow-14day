@@ -1,61 +1,42 @@
 const ProductPreview = () => {
   return (
-    <section className="py-16 md:py-20 bg-background-subtle border-y border-border/50">
+    <section className="py-24 md:py-32 bg-background">
       <div className="container-wide">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="heading-subsection mb-3">What it looks like when it's working</h2>
-          <p className="text-body max-w-2xl mx-auto">
-            Calls answered or captured. Booking locked. Follow-up running. Everything logged.
-          </p>
-        </div>
-
-        {/* Flow strip */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex items-center gap-3 md:gap-6 px-6 py-3 bg-card rounded-full border border-border shadow-card">
-            {["Tap", "Call", "Book", "Confirm", "Show"].map((step, i) => (
-              <span key={step} className="flex items-center gap-3 md:gap-6">
-                <span className="text-sm md:text-base font-semibold text-foreground">{step}</span>
-                {i < 4 && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                )}
-              </span>
-            ))}
+        {/* Header - Large mixed typography */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-20">
+          <h2 className="heading-section heading-mixed">
+            Designed to<br />
+            Help You Do<br />
+            More <span className="serif-italic">With Less</span><br />
+            <span className="serif-italic">Stress</span>
+          </h2>
+          <div className="lg:pt-4">
+            <p className="text-body max-w-md">
+              Our call-first system is built for modern service businesses who want to stay organized, 
+              focused, and in control of every enquiry.
+            </p>
           </div>
         </div>
 
-        {/* Activity preview row */}
-        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        {/* Feature grid - 3 columns */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {[
             { 
-              title: "Incoming Calls", 
-              count: "12 today",
-              items: ["Sarah M. • Booked", "James T. • Follow-up", "Emily R. • Booked"]
+              title: "Smart Call Handling", 
+              description: "Easily answer, qualify, and route calls with an AI receptionist that adapts to your business workflow."
             },
             { 
-              title: "Follow-ups Active", 
-              count: "8 running",
-              items: ["Day 2 reminder sent", "Confirmation due", "No-show recovery"]
+              title: "Integrated Booking & Follow-ups", 
+              description: "Stay ahead of your schedule with built-in booking that syncs across all your devices and follows up automatically."
             },
             { 
-              title: "Bookings", 
-              count: "9 this week",
-              items: ["Tomorrow 10:00 AM", "Wed 2:30 PM", "Fri 11:00 AM"]
+              title: "Focus Mode", 
+              description: "Eliminate distractions with a minimalist dashboard and time-blocking tools that help you get into deep work—fast."
             },
-          ].map((card) => (
-            <div key={card.title} className="card-premium p-5">
-              <div className="flex items-center justify-between mb-4">
-                <h4 className="font-medium text-foreground">{card.title}</h4>
-                <span className="text-xs text-muted-foreground">{card.count}</span>
-              </div>
-              <div className="space-y-2">
-                {card.items.map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                    {item}
-                  </div>
-                ))}
-              </div>
+          ].map((feature) => (
+            <div key={feature.title} className="space-y-4">
+              <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

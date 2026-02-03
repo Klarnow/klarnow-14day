@@ -25,12 +25,12 @@ const problems = [
 
 const Problem = () => {
   return (
-    <section className="section-padding bg-background" id="problem">
+    <section className="section-padding bg-background-subtle" id="problem">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left Column - Copy */}
           <div className="max-w-lg">
-            <p className="eyebrow mb-4">THE PROBLEM</p>
+            <p className="eyebrow mb-6">The Problem</p>
             <h2 className="heading-section mb-6">
               You're getting enquiries and still losing bookings.
             </h2>
@@ -45,11 +45,11 @@ const Problem = () => {
             {problems.map((problem, index) => (
               <div 
                 key={problem.title} 
-                className="card-feature flex items-start gap-4 hover:translate-x-1"
+                className="flex items-start gap-5 p-5 rounded-2xl bg-card border border-border/30 hover:border-border/60 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-destructive/10 flex items-center justify-center">
-                  <problem.icon className="h-5 w-5 text-destructive" />
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-destructive/5 flex items-center justify-center">
+                  <problem.icon className="h-5 w-5 text-destructive/70" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">{problem.title}</h3>

@@ -1,55 +1,45 @@
-import { Check, Settings, FileText, Bell, Shield } from "lucide-react";
+import { Check } from "lucide-react";
 
 const controls = [
-  {
-    icon: Settings,
-    text: "Set what the receptionist handles alone vs what gets escalated",
-  },
-  {
-    icon: FileText,
-    text: "Get call transcripts and summaries",
-  },
-  {
-    icon: Shield,
-    text: "Choose tone, rules, and booking boundaries",
-  },
-  {
-    icon: Bell,
-    text: "Smart notifications for what actually matters",
-  },
+  "Set what the receptionist handles alone vs what gets escalated",
+  "Get call transcripts and summaries",
+  "Choose tone, rules, and booking boundaries",
+  "Smart notifications for what actually matters",
 ];
 
 const HumanControl = () => {
   return (
-    <section className="section-padding bg-background-subtle">
+    <section className="section-padding bg-background">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Column - Copy */}
           <div>
-            <h2 className="heading-section mb-8">
-              AI does the work. You stay in control.
+            <p className="eyebrow mb-6">Control</p>
+            <h2 className="heading-section heading-mixed mb-8">
+              AI does the work.<br />
+              <span className="serif-italic">You stay in control.</span>
             </h2>
 
             <div className="space-y-4">
               {controls.map((control) => (
-                <div key={control.text} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-success/10 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-success" />
+                <div key={control} className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-success/10 flex items-center justify-center mt-0.5">
+                    <Check className="h-3.5 w-3.5 text-success" />
                   </div>
-                  <p className="text-foreground/80 pt-1">{control.text}</p>
+                  <p className="text-muted-foreground">{control}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right Column - UI Panel */}
-          <div className="card-premium p-6">
+          <div className="bg-card rounded-2xl border border-border/30 p-6">
             <div className="flex items-center justify-between mb-6">
               <h4 className="font-semibold text-foreground">Activity & Approvals</h4>
-              <span className="pill text-xs">Today</span>
+              <span className="px-3 py-1 rounded-full bg-muted text-xs text-muted-foreground">Today</span>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 { 
                   title: "Call escalation request",
@@ -70,14 +60,14 @@ const HumanControl = () => {
                   action: null
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-start justify-between p-4 bg-background-subtle rounded-xl">
+                <div key={i} className="flex items-start justify-between p-4 bg-muted/30 rounded-xl">
                   <div className="flex-1">
                     <p className="font-medium text-foreground text-sm">{item.title}</p>
                     <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{item.time}</p>
+                    <p className="text-xs text-muted-foreground/60 mt-1">{item.time}</p>
                   </div>
                   {item.action && (
-                    <button className="text-xs font-medium text-primary hover:text-primary/80 transition-colors">
+                    <button className="text-xs font-medium text-foreground hover:text-foreground/70 transition-colors underline underline-offset-2">
                       {item.action}
                     </button>
                   )}

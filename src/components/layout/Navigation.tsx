@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Phone, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const PHONE_NUMBER = "+441616960976";
@@ -18,21 +18,21 @@ const NavDropdown = ({ label, items, isOpen, onToggle, onClose }: NavDropdownPro
   <div className="relative">
     <button
       onClick={onToggle}
-      className="flex items-center gap-1.5 text-foreground/70 hover:text-foreground transition-colors font-medium text-sm py-2"
+      className="flex items-center gap-1 text-foreground/60 hover:text-foreground transition-colors font-medium text-sm py-2"
       aria-expanded={isOpen}
     >
       {label}
-      <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", isOpen && "rotate-180")} />
+      <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200", isOpen && "rotate-180")} />
     </button>
     {isOpen && (
       <>
         <div className="fixed inset-0 z-40" onClick={onClose} />
-        <div className="absolute top-full left-0 mt-2 w-56 bg-card rounded-xl border border-border shadow-xl p-2 z-50 animate-scale-in">
+        <div className="absolute top-full left-0 mt-2 w-52 bg-card rounded-xl border border-border/30 shadow-xl p-2 z-50 animate-scale-in">
           {items.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
               onClick={onClose}
             >
               {item.label}
@@ -95,20 +95,20 @@ const Navigation = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "glass border-b border-border/50 shadow-sm"
+            ? "bg-background/80 backdrop-blur-xl border-b border-border/30"
             : "bg-transparent"
         )}
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="container-wide">
-          <div className="flex items-center justify-between h-16 md:h-18">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2 text-xl font-bold text-foreground">
+            <a href="/" className="flex items-center gap-2 text-lg font-semibold text-foreground tracking-tight">
               Klarnow
             </a>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Center */}
             <div className="hidden lg:flex items-center gap-8">
               <NavDropdown
                 label={navItems.products.label}
@@ -133,40 +133,41 @@ const Navigation = () => {
               />
             </div>
 
-            {/* Desktop CTA */}
+            {/* Desktop CTA - Pill outline style */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button variant="hero" size="default" asChild>
-                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  Call now
-                </a>
-              </Button>
+              <a 
+                href={`tel:${PHONE_NUMBER}`} 
+                className="pill-outline group"
+              >
+                Call now
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
             </div>
 
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="lg:hidden p-2 text-foreground hover:bg-muted/50 rounded-lg transition-colors"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden glass border-t border-border/50">
+          <div className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/30">
             <div className="container-wide py-6 space-y-6">
               {Object.entries(navItems).map(([key, { label, items }]) => (
                 <div key={key} className="space-y-2">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{label}</p>
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{label}</p>
                   <div className="space-y-1">
                     {items.map((item) => (
                       <a
                         key={item.label}
                         href={item.href}
-                        className="block py-2 text-foreground/80 hover:text-foreground transition-colors"
+                        className="block py-2 text-foreground/70 hover:text-foreground transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {item.label}
@@ -177,8 +178,8 @@ const Navigation = () => {
               ))}
               <Button variant="hero" size="lg" className="w-full mt-4" asChild>
                 <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-2">
-                  <Phone className="h-4 w-4" />
                   Call now
+                  <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
             </div>
@@ -187,11 +188,11 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Sticky Call Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden glass border-t border-border/50 p-3">
+      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/90 backdrop-blur-xl border-t border-border/30 p-3">
         <Button variant="hero" size="lg" className="w-full" asChild>
           <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-2">
-            <Phone className="h-4 w-4" />
             Call now {PHONE_DISPLAY}
+            <ArrowRight className="h-4 w-4" />
           </a>
         </Button>
       </div>

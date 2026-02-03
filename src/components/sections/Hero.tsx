@@ -12,145 +12,99 @@ const trustChips = [
 
 const Hero = () => {
   return (
-    <section className="relative hero-gradient pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/3 rounded-full blur-3xl" />
-      </div>
-
+    <section className="relative hero-gradient min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden">
       <div className="container-wide relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column - Copy */}
-          <div className="max-w-2xl">
-            {/* Live pill */}
-            <div className="inline-flex items-center gap-2 pill-success mb-6 animate-fade-in">
-              <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
-              Live now
-            </div>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Eyebrow */}
+          <p 
+            className="eyebrow mb-6 animate-fade-in"
+          >
+            Your calls, in perfect rhythm.
+          </p>
 
-            {/* Main headline */}
-            <h1 className="heading-display mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Instant Receptionist
-            </h1>
+          {/* Main headline */}
+          <h1 
+            className="heading-display mb-6 animate-fade-in-up" 
+            style={{ animationDelay: "0.1s" }}
+          >
+            Instant Receptionist
+          </h1>
 
-            {/* Explanation line */}
-            <p 
-              className="text-xl md:text-2xl font-semibold text-foreground/90 mb-6 animate-fade-in-up" 
-              style={{ animationDelay: "0.2s" }}
-            >
-              The 14-Day Call-First System that stops missed calls, slow replies, and no-shows.
-            </p>
+          {/* Sub-head */}
+          <p 
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed" 
+            style={{ animationDelay: "0.2s" }}
+          >
+            The 14-Day Call-First System that stops missed calls, slow replies, and no-shows. 
+            Answers when you're busy. Books appointments. You stay in control.
+          </p>
 
-            {/* Sub-head */}
-            <p 
-              className="text-body mb-8 animate-fade-in-up" 
-              style={{ animationDelay: "0.3s" }}
-            >
-              Answers calls when you're busy or closed. Captures every enquiry. Books appointments. 
-              Follows up until they decide. You stay in control.
-            </p>
-
-            {/* CTAs */}
-            <div 
-              className="flex flex-col sm:flex-row gap-4 mb-4 animate-fade-in-up" 
-              style={{ animationDelay: "0.4s" }}
-            >
-              <Button variant="hero" size="xl" asChild>
-                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  Call now
-                </a>
-              </Button>
-              <Button variant="hero-secondary" size="xl" asChild>
-                <a href="https://staging.klarnow.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  Generate my Brand OS
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-
-            {/* Micro text */}
-            <p 
-              className="text-sm text-muted-foreground mb-6 animate-fade-in-up" 
-              style={{ animationDelay: "0.5s" }}
-            >
-              60-second Fit Check. No pitch.
-            </p>
-
-            {/* Support line */}
-            <p 
-              className="text-sm text-muted-foreground mb-8 animate-fade-in-up" 
-              style={{ animationDelay: "0.5s" }}
-            >
-              Built for established UK service businesses that already get enquiries.
-            </p>
-
-            {/* Trust chips */}
-            <div 
-              className="flex flex-wrap gap-2 animate-fade-in-up" 
-              style={{ animationDelay: "0.6s" }}
-            >
-              {trustChips.map((chip) => (
-                <span key={chip} className="pill text-xs">
-                  {chip}
-                </span>
-              ))}
-            </div>
+          {/* Primary CTA */}
+          <div 
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-fade-in-up" 
+            style={{ animationDelay: "0.3s" }}
+          >
+            <Button variant="hero" size="xl" asChild>
+              <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-3">
+                Call now
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="hero-secondary" size="xl" asChild>
+              <a href="https://staging.klarnow.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                Generate my Brand OS
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
 
-          {/* Right Column - UI Mockup */}
+          {/* Micro text */}
+          <p 
+            className="text-sm text-muted-foreground mb-16 animate-fade-in-up" 
+            style={{ animationDelay: "0.4s" }}
+          >
+            60-second Fit Check. No pitch.
+          </p>
+
+          {/* Abstract phone/dashboard visual */}
           <div 
-            className="relative animate-fade-in-up lg:pl-8" 
+            className="relative max-w-lg mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.5s" }}
           >
-            <div className="relative">
-              {/* Main dashboard card */}
-              <div className="card-premium p-6 mb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-semibold text-foreground">Activity Feed</h3>
-                  <span className="pill-success text-xs">Live</span>
+            {/* Floating gradient orbs behind */}
+            <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-pink)/0.5)] to-transparent blur-3xl" />
+            <div className="absolute -bottom-10 -right-20 w-48 h-48 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-orange)/0.4)] to-transparent blur-3xl" />
+            <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-purple)/0.3)] to-transparent blur-3xl" />
+            
+            {/* Dashboard mockup card */}
+            <div className="relative card-premium p-6 backdrop-blur-sm bg-card/80">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
+                  <span className="text-sm font-medium text-foreground">Live Activity</span>
                 </div>
-                <div className="space-y-3">
-                  {[
-                    { time: "2m ago", event: "Call answered • Sarah M.", status: "Booked", statusColor: "bg-success" },
-                    { time: "15m ago", event: "Follow-up sent • James T.", status: "Pending", statusColor: "bg-amber-500" },
-                    { time: "1h ago", event: "Enquiry captured • David K.", status: "New", statusColor: "bg-primary" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
-                      <div>
-                        <p className="text-sm font-medium text-foreground">{item.event}</p>
-                        <p className="text-xs text-muted-foreground">{item.time}</p>
-                      </div>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium text-white ${item.statusColor}`}>
-                        {item.status}
-                      </span>
+                <span className="text-xs text-muted-foreground">Today</span>
+              </div>
+              <div className="space-y-3">
+                {[
+                  { event: "Call answered • Sarah M.", status: "Booked", time: "2m ago" },
+                  { event: "Follow-up sent • James T.", status: "Pending", time: "15m ago" },
+                  { event: "Enquiry captured • David K.", status: "New", time: "1h ago" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center justify-between py-3 border-b border-border/30 last:border-0">
+                    <div className="text-left">
+                      <p className="text-sm font-medium text-foreground">{item.event}</p>
+                      <p className="text-xs text-muted-foreground">{item.time}</p>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Floating transcript card */}
-              <div className="card-premium p-4 absolute -bottom-4 -left-4 w-64 shadow-xl">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Phone className="h-4 w-4 text-primary" />
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      item.status === 'Booked' ? 'bg-success/10 text-success' :
+                      item.status === 'Pending' ? 'bg-amber-500/10 text-amber-600' :
+                      'bg-primary/10 text-primary'
+                    }`}>
+                      {item.status}
+                    </span>
                   </div>
-                  <div>
-                    <p className="text-xs font-medium text-foreground">Call Transcript</p>
-                    <p className="text-xs text-muted-foreground">Today 2:34 PM</p>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground line-clamp-2">
-                  "Hi, I'd like to book an appointment for next week..."
-                </p>
-              </div>
-
-              {/* Floating stats card */}
-              <div className="card-premium p-4 absolute -top-4 -right-4 w-48 shadow-xl hidden md:block">
-                <p className="text-xs text-muted-foreground mb-1">This week</p>
-                <p className="text-2xl font-bold text-foreground">47</p>
-                <p className="text-xs text-success font-medium">Calls answered</p>
+                ))}
               </div>
             </div>
           </div>

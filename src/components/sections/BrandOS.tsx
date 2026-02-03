@@ -1,17 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const BrandOS = () => {
   return (
-    <section className="section-padding bg-background" id="brand-os">
+    <section className="section-padding bg-background-subtle" id="brand-os">
       <div className="container-narrow text-center">
-        <div className="inline-flex items-center gap-2 pill-accent mb-6">
-          <Sparkles className="h-4 w-4" />
-          Free tool
-        </div>
+        <p className="eyebrow mb-6">Free tool</p>
         
-        <h2 className="heading-section mb-6">Want the words first?</h2>
-        <p className="text-body max-w-2xl mx-auto mb-8">
+        <h2 className="heading-section heading-mixed mb-6">
+          Want the <span className="serif-italic">words</span> first?
+        </h2>
+        <p className="text-body max-w-2xl mx-auto mb-10">
           Generate your Brand OS in 60 seconds. Get positioning, offer clarity, and messaging 
           you can paste into your site today.
         </p>
@@ -21,10 +20,10 @@ const BrandOS = () => {
             href="https://staging.klarnow.ai" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex items-center gap-2"
+            className="flex items-center gap-3"
           >
             Generate my Brand OS
-            <ArrowRight className="h-5 w-5" />
+            <ArrowRight className="h-4 w-4" />
           </a>
         </Button>
         
