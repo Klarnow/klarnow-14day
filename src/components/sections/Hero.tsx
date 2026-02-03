@@ -1,30 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const PHONE_NUMBER = "+441616960976";
 
 const trustChips = [
   "Installed in 14 days",
-  "4 priority install slots per month",
-  "We guarantee installation, not revenue",
+  "4 slots per month",
   "See it live on the call",
 ];
 
 const Hero = () => {
   return (
-    <section className="relative hero-gradient min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden">
+    <section className="relative hero-gradient min-h-[85vh] md:min-h-screen flex items-center justify-center pt-16 pb-12 md:pt-20 md:pb-16 overflow-hidden">
       <div className="container-wide relative">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Eyebrow */}
-          <p 
-            className="eyebrow mb-6 animate-fade-in"
-          >
+          <p className="eyebrow mb-4 md:mb-6 animate-fade-in">
             Your calls, in perfect rhythm.
           </p>
 
           {/* Main headline */}
           <h1 
-            className="heading-display mb-6 animate-fade-in-up" 
+            className="heading-display mb-4 md:mb-6 animate-fade-in-up" 
             style={{ animationDelay: "0.1s" }}
           >
             Instant Receptionist
@@ -32,27 +29,27 @@ const Hero = () => {
 
           {/* Sub-head */}
           <p 
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed" 
+            className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 animate-fade-in-up leading-relaxed" 
             style={{ animationDelay: "0.2s" }}
           >
-            The 14-Day Call-First System that stops missed calls, slow replies, and no-shows. 
+            The 14-Day Call-First System that stops missed calls and no-shows. 
             Answers when you're busy. Books appointments. You stay in control.
           </p>
 
           {/* Primary CTA */}
           <div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-fade-in-up" 
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 animate-fade-in-up" 
             style={{ animationDelay: "0.3s" }}
           >
-            <Button variant="hero" size="xl" asChild>
-              <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-3">
+            <Button variant="hero" size="lg" asChild>
+              <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
                 Call now
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
-            <Button variant="hero-secondary" size="xl" asChild>
-              <a href="https://staging.klarnow.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                Generate my Brand OS
+            <Button variant="hero-secondary" size="lg" asChild>
+              <a href="https://staging.klarnow.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                Generate Brand OS
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
@@ -60,43 +57,53 @@ const Hero = () => {
 
           {/* Micro text */}
           <p 
-            className="text-sm text-muted-foreground mb-16 animate-fade-in-up" 
+            className="text-xs md:text-sm text-muted-foreground mb-10 md:mb-12 animate-fade-in-up" 
             style={{ animationDelay: "0.4s" }}
           >
             60-second Fit Check. No pitch.
           </p>
 
-          {/* Abstract phone/dashboard visual */}
+          {/* Trust chips */}
           <div 
-            className="relative max-w-lg mx-auto animate-fade-in-up"
+            className="flex flex-wrap justify-center gap-2 mb-10 md:mb-14 animate-fade-in-up"
+            style={{ animationDelay: "0.45s" }}
+          >
+            {trustChips.map((chip) => (
+              <span key={chip} className="px-3 py-1.5 rounded-full bg-muted/60 text-xs text-muted-foreground">
+                {chip}
+              </span>
+            ))}
+          </div>
+
+          {/* Dashboard mockup card */}
+          <div 
+            className="relative max-w-md mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.5s" }}
           >
-            {/* Floating gradient orbs behind */}
-            <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-pink)/0.5)] to-transparent blur-3xl" />
-            <div className="absolute -bottom-10 -right-20 w-48 h-48 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-orange)/0.4)] to-transparent blur-3xl" />
-            <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-purple)/0.3)] to-transparent blur-3xl" />
+            {/* Floating gradient orbs */}
+            <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-pink)/0.4)] to-transparent blur-3xl" />
+            <div className="absolute -bottom-8 -right-16 w-40 h-40 rounded-full bg-gradient-to-br from-[hsl(var(--gradient-orange)/0.3)] to-transparent blur-3xl" />
             
-            {/* Dashboard mockup card */}
-            <div className="relative card-premium p-6 backdrop-blur-sm bg-card/80">
-              <div className="flex items-center justify-between mb-4">
+            <div className="relative card-premium p-4 md:p-5 backdrop-blur-sm bg-card/80">
+              <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
-                  <span className="text-sm font-medium text-foreground">Live Activity</span>
+                  <span className="w-1.5 h-1.5 bg-success rounded-full animate-pulse" />
+                  <span className="text-xs font-medium text-foreground">Live Activity</span>
                 </div>
-                <span className="text-xs text-muted-foreground">Today</span>
+                <span className="text-[10px] text-muted-foreground">Today</span>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {[
                   { event: "Call answered • Sarah M.", status: "Booked", time: "2m ago" },
                   { event: "Follow-up sent • James T.", status: "Pending", time: "15m ago" },
                   { event: "Enquiry captured • David K.", status: "New", time: "1h ago" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-3 border-b border-border/30 last:border-0">
+                  <div key={i} className="flex items-center justify-between py-2.5 border-b border-border/30 last:border-0">
                     <div className="text-left">
-                      <p className="text-sm font-medium text-foreground">{item.event}</p>
-                      <p className="text-xs text-muted-foreground">{item.time}</p>
+                      <p className="text-xs font-medium text-foreground">{item.event}</p>
+                      <p className="text-[10px] text-muted-foreground">{item.time}</p>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${
                       item.status === 'Booked' ? 'bg-success/10 text-success' :
                       item.status === 'Pending' ? 'bg-amber-500/10 text-amber-600' :
                       'bg-primary/10 text-primary'
