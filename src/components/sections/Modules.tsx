@@ -50,33 +50,36 @@ const modules = [
 
 const Modules = () => {
   return (
-    <section className="section-padding bg-background" id="instant-receptionist">
+    <section className="section-padding bg-background-subtle" id="instant-receptionist">
       <div className="container-wide">
         <div className="text-center mb-16">
-          <p className="eyebrow mb-4">CORE MODULES</p>
-          <h2 className="heading-section">Everything you need to stop leaking bookings</h2>
+          <p className="eyebrow mb-6">Core Modules</p>
+          <h2 className="heading-section heading-mixed">
+            Everything you need to<br />
+            <span className="serif-italic">stop leaking bookings</span>
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {modules.map((module, index) => (
             <div 
               key={module.title} 
-              className="card-premium p-6 lg:p-8 hover:border-primary/30"
+              className="bg-card rounded-2xl border border-border/30 p-6 lg:p-8 hover:border-border/60 transition-all duration-300"
             >
               <div className="flex items-start gap-4 mb-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
-                  <module.icon className="h-6 w-6 text-primary" />
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-muted flex items-center justify-center">
+                  <module.icon className="h-5 w-5 text-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-1">{module.title}</h3>
+                  <h3 className="text-lg font-semibold text-foreground mb-1">{module.title}</h3>
                   <p className="text-sm text-muted-foreground">{module.description}</p>
                 </div>
               </div>
 
               <ul className="space-y-2 mb-6">
                 {module.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 text-sm text-foreground/80">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <li key={bullet} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 w-1 h-1 rounded-full bg-foreground/40 mt-2" />
                     {bullet}
                   </li>
                 ))}
@@ -84,7 +87,7 @@ const Modules = () => {
 
               <div className="flex flex-wrap gap-2">
                 {module.chips.map((chip) => (
-                  <span key={chip} className="pill-accent text-xs">
+                  <span key={chip} className="px-3 py-1 rounded-full bg-muted text-xs text-muted-foreground">
                     {chip}
                   </span>
                 ))}

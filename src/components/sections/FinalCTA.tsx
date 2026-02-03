@@ -1,27 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const PHONE_NUMBER = "+441616960976";
 
 const FinalCTA = () => {
   return (
-    <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-primary/5">
-      <div className="container-narrow text-center">
-        <h2 className="heading-section mb-6">Want to stop leaking bookings?</h2>
-        <p className="text-body max-w-2xl mx-auto mb-8">
-          Call now for a 60-second Fit Check. We'll confirm fit and the next start date.
-        </p>
-        
-        <Button variant="hero" size="xl" asChild>
-          <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-            <Phone className="h-5 w-5" />
-            Call now
-          </a>
-        </Button>
-        
-        <p className="text-sm text-muted-foreground mt-4">
-          See it live on the call.
-        </p>
+    <section className="relative overflow-hidden">
+      {/* Gradient banner */}
+      <div className="gradient-bottom h-64 md:h-80 flex items-center justify-center">
+        <div className="text-center px-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground/90 mb-6">
+            Want to stop leaking bookings?
+          </h2>
+          <Button variant="hero" size="xl" asChild className="bg-foreground text-background hover:bg-foreground/90">
+            <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-3">
+              Call now
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </Button>
+          <p className="text-sm text-foreground/60 mt-4">
+            60-second Fit Check. See it live on the call.
+          </p>
+        </div>
       </div>
     </section>
   );

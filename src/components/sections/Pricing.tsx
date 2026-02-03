@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const PHONE_NUMBER = "+441616960976";
 
@@ -37,8 +37,11 @@ const Pricing = () => {
   return (
     <section className="section-padding bg-background-subtle" id="pricing">
       <div className="container-wide">
-        <div className="text-center mb-6">
-          <h2 className="heading-section mb-4">Choose your install level</h2>
+        <div className="text-center mb-16">
+          <p className="eyebrow mb-6">Pricing</p>
+          <h2 className="heading-section heading-mixed mb-4">
+            Choose your <span className="serif-italic">install level</span>
+          </h2>
           <p className="text-body max-w-2xl mx-auto">
             Every option installs the core system. The difference is activation support and proof creation.
           </p>
@@ -49,21 +52,25 @@ const Pricing = () => {
           {plans.map((plan) => (
             <div 
               key={plan.name} 
-              className={`card-premium p-6 lg:p-8 relative ${
-                plan.featured ? "border-primary shadow-lg ring-1 ring-primary/20" : ""
+              className={`bg-card rounded-2xl border p-6 lg:p-8 relative transition-all duration-300 ${
+                plan.featured 
+                  ? "border-foreground/20 shadow-lg" 
+                  : "border-border/30 hover:border-border/60"
               }`}
             >
               {plan.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="pill-accent text-xs font-semibold">Most chosen</span>
+                <div className="absolute -top-3 left-6">
+                  <span className="px-3 py-1 rounded-full bg-foreground text-background text-xs font-medium">
+                    Most chosen
+                  </span>
                 </div>
               )}
               
-              <h3 className="text-lg font-semibold text-foreground mb-2">{plan.name}</h3>
+              <h3 className="text-base font-semibold text-foreground mb-2">{plan.name}</h3>
               <div className="text-3xl font-bold text-foreground mb-4">{plan.price}</div>
               <p className="text-sm text-muted-foreground mb-6">{plan.description}</p>
               
-              <div className="pt-4 border-t border-border">
+              <div className="pt-4 border-t border-border/30">
                 <p className="text-xs text-muted-foreground mb-1">Best for:</p>
                 <p className="text-sm text-foreground/80">{plan.bestFor}</p>
               </div>
@@ -72,11 +79,11 @@ const Pricing = () => {
         </div>
 
         {/* Notes */}
-        <div className="max-w-2xl mx-auto mb-12">
+        <div className="max-w-xl mx-auto mb-12">
           <div className="space-y-2">
             {notes.map((note) => (
               <div key={note} className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                <span className="w-1 h-1 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
                 <p className="text-sm text-muted-foreground">{note}</p>
               </div>
             ))}
@@ -87,11 +94,11 @@ const Pricing = () => {
         <div className="text-center">
           <Button variant="hero" size="xl" asChild>
             <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-              <Phone className="h-5 w-5" />
               Call now
+              <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground mt-3">See it live on the call.</p>
+          <p className="text-sm text-muted-foreground mt-4">See it live on the call.</p>
         </div>
       </div>
     </section>
