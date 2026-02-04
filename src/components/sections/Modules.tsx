@@ -55,38 +55,38 @@ const Modules = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-muted/30" 
+      className="section-padding bg-background-subtle" 
       id="instant-receptionist"
     >
       <div className="container-wide">
-        <div className={cn("text-center mb-10 md:mb-12 scroll-fade-in", isVisible && "visible")}>
-          <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">Core Modules</p>
-          <h2 className="heading-section">
-            Stop leaking bookings
+        <div className={cn("text-center mb-10 md:mb-14 scroll-fade-in", isVisible && "visible")}>
+          <p className="eyebrow mb-4">Core Modules</p>
+          <h2 className="heading-section heading-mixed">
+            Stop leaking <span className="serif-italic">bookings</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 lg:gap-5">
+        <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
           {modules.map((module, index) => (
             <div 
               key={module.title} 
               className={cn(
-                "bg-card rounded-xl border border-border/30 p-5 hover:border-border/60 transition-all duration-300 scroll-fade-in",
+                "bg-card rounded-xl border border-border/30 p-5 lg:p-6 hover:border-border/60 transition-all duration-300 scroll-fade-in",
                 isVisible && "visible"
               )}
-              style={{ transitionDelay: `${(index + 1) * 75}ms` }}
+              style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
-              <div className="flex items-start gap-3 mb-3">
+              <div className="flex items-start gap-3 mb-4">
                 <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-muted flex items-center justify-center">
                   <module.icon className="h-4 w-4 text-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-foreground">{module.title}</h3>
+                  <h3 className="text-sm font-semibold text-foreground mb-0.5">{module.title}</h3>
                   <p className="text-xs text-muted-foreground">{module.description}</p>
                 </div>
               </div>
 
-              <ul className="space-y-1.5 mb-3">
+              <ul className="space-y-1.5 mb-4">
                 {module.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-2 text-xs text-muted-foreground">
                     <span className="flex-shrink-0 w-1 h-1 rounded-full bg-foreground/40 mt-1.5" />

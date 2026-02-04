@@ -31,38 +31,39 @@ const Problem = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-muted/30" 
+      className="section-padding bg-background-subtle" 
       id="problem"
     >
       <div className="container-wide">
-        {/* Header */}
-        <div className={cn("text-center mb-10 md:mb-12 scroll-fade-in", isVisible && "visible")}>
-          <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">The Problem</p>
-          <h2 className="heading-section mb-4">
-            Getting enquiries, still losing bookings
-          </h2>
-          <p className="text-body max-w-md mx-auto">
-            It's not demand. It's leakage from missed calls and weak follow-up.
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          {/* Left Column */}
+          <div className={cn("max-w-md scroll-fade-left", isVisible && "visible")}>
+            <p className="eyebrow mb-4">The Problem</p>
+            <h2 className="heading-section mb-4">
+              Getting enquiries, still losing bookings.
+            </h2>
+            <p className="text-body">
+              It's not demand. It's leakage. Missed calls and weak follow-up drain your calendar.
+            </p>
+          </div>
 
-        {/* Problems grid */}
-        <div className={cn(
-          "grid sm:grid-cols-2 lg:grid-cols-4 gap-4 scroll-fade-in",
-          isVisible && "visible"
-        )} style={{ transitionDelay: "100ms" }}>
-          {problems.map((problem) => (
-            <div 
-              key={problem.title} 
-              className="bg-card rounded-xl border border-border/30 p-5 hover:border-border/60 transition-all duration-300 text-center"
-            >
-              <div className="w-10 h-10 rounded-lg bg-destructive/5 flex items-center justify-center mx-auto mb-3">
-                <problem.icon className="h-5 w-5 text-destructive/70" />
+          {/* Right Column */}
+          <div className={cn("space-y-3 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
+            {problems.map((problem) => (
+              <div 
+                key={problem.title} 
+                className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border/30 hover:border-border/60 transition-all duration-300"
+              >
+                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-destructive/5 flex items-center justify-center">
+                  <problem.icon className="h-4 w-4 text-destructive/70" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground text-sm mb-0.5">{problem.title}</h3>
+                  <p className="text-xs text-muted-foreground">{problem.description}</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-foreground text-sm mb-1">{problem.title}</h3>
-              <p className="text-xs text-muted-foreground">{problem.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
