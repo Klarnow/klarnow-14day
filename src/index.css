@@ -254,9 +254,11 @@
   /* Soft gradient hero background */
   .hero-gradient {
     background: 
-      radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--gradient-pink) / 0.4), transparent 60%),
-      radial-gradient(ellipse 60% 50% at 70% 50%, hsl(var(--gradient-orange) / 0.3), transparent 50%),
-      radial-gradient(ellipse 50% 40% at 30% 60%, hsl(var(--gradient-purple) / 0.25), transparent 50%),
+      radial-gradient(ellipse 100% 80% at 0% 0%, hsl(320 60% 85% / 0.8), transparent 50%),
+      radial-gradient(ellipse 100% 80% at 100% 0%, hsl(280 50% 80% / 0.6), transparent 50%),
+      radial-gradient(ellipse 80% 60% at 50% 50%, hsl(0 0% 100% / 0.9), transparent 70%),
+      radial-gradient(ellipse 100% 80% at 0% 100%, hsl(280 40% 85% / 0.5), transparent 50%),
+      radial-gradient(ellipse 100% 80% at 100% 100%, hsl(300 50% 85% / 0.6), transparent 50%),
       hsl(var(--background));
   }
 
