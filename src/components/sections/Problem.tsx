@@ -5,23 +5,23 @@ import { cn } from "@/lib/utils";
 const problems = [
   {
     icon: PhoneMissed,
-    title: "Missed calls",
-    description: "If you don't answer fast, they call the next option.",
+    title: "Calls go to voicemail",
+    description: "Calls during a job go straight to voicemail.",
   },
   {
     icon: Clock,
-    title: "Slow replies",
-    description: "People move on while you're busy.",
+    title: "Evening enquiries wait",
+    description: "Evening enquiries sit until morning (they've already moved on).",
   },
   {
     icon: UserX,
-    title: "No follow-up",
-    description: "Leads sit in messages with no outcome.",
+    title: "Indecision",
+    description: "\"Just checking prices\" becomes \"I'll think about it\".",
   },
   {
     icon: Eye,
     title: "No visibility",
-    description: "You can't see what's working.",
+    description: "You can't see what happened without chasing people down.",
   },
 ];
 
@@ -29,9 +29,9 @@ const Problem = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section 
+    <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background-subtle" 
+      className="section-padding bg-background-subtle"
       id="problem"
     >
       <div className="container-wide">
@@ -40,18 +40,21 @@ const Problem = () => {
           <div className={cn("max-w-md scroll-fade-left", isVisible && "visible")}>
             <p className="eyebrow mb-4">The Problem</p>
             <h2 className="heading-section mb-4">
-              Getting enquiries, still losing bookings.
+              You already do the hard part, getting people interested.
             </h2>
-            <p className="text-body">
-              It's not demand. It's leakage. Missed calls and weak follow-up drain your calendar.
+            <p className="text-body mb-2">
+              Then the leak happens.
+            </p>
+            <p className="text-body font-medium">
+              This isn't a lead problem. It's a conversion problem.
             </p>
           </div>
 
           {/* Right Column */}
           <div className={cn("space-y-3 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
             {problems.map((problem) => (
-              <div 
-                key={problem.title} 
+              <div
+                key={problem.title}
                 className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border/30 hover:border-border/60 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-destructive/5 flex items-center justify-center">

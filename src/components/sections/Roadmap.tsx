@@ -1,44 +1,42 @@
-import { Check, Clock, Zap } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
-const roadmapItems = [
+const timelineItems = [
   {
-    status: "Live",
-    statusBg: "bg-success/10",
-    statusText: "text-success",
-    icon: Check,
-    iconBg: "bg-success",
-    title: "Instant Receptionist + Call-First System",
-    chips: ["Calls", "Transcripts", "Booking", "Reminders"],
+    number: "1",
+    title: "A mobile conversion page with one clear next step",
+    subtitle: "Fit Check → audit booking flow"
   },
   {
-    status: "Soon",
-    statusBg: "bg-amber-500/10",
-    statusText: "text-amber-600",
-    icon: Clock,
-    iconBg: "bg-amber-500",
-    title: "Every Channel",
-    chips: ["SMS", "WhatsApp", "Email"],
+    number: "2",
+    title: "Follow-up messages",
+    subtitle: "That nudge non-responders and reduce no-shows"
   },
   {
-    status: "Coming",
-    statusBg: "bg-muted",
-    statusText: "text-muted-foreground",
-    icon: Zap,
-    iconBg: "bg-muted-foreground",
-    title: "Proactive Outbound",
-    chips: ["Reminders", "Follow-ups", "Reviews"],
+    number: "3",
+    title: "Owner Dashboard",
+    subtitle: "Pipeline + follow-up due list"
   },
+  {
+    number: "4",
+    title: "Tracking",
+    subtitle: "So you can see what is working"
+  },
+  {
+    number: "5",
+    title: "Missed Call Capture (included)",
+    subtitle: "Inbound call handling that captures details and routes to booking or callback"
+  }
 ];
 
 const Roadmap = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section 
+    <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background-subtle" 
+      className="section-padding bg-background-subtle"
       id="roadmap"
     >
       <div className="container-wide">
@@ -48,42 +46,57 @@ const Roadmap = () => {
             What's <span className="serif-italic">next</span>
           </h2>
           <p className="text-body max-w-md mx-auto">
-            Starting with calls. Expanding across every channel.
+            A mobile conversion page with one clear next step
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="max-w-lg mx-auto">
-          <div className="space-y-4">
-            {roadmapItems.map((item, index) => (
-              <div 
-                key={item.title} 
-                className={cn("relative flex gap-4 scroll-fade-in", isVisible && "visible")}
-                style={{ transitionDelay: `${(index + 1) * 100}ms` }}
-              >
-                {/* Timeline dot */}
-                <div className={`flex-shrink-0 w-8 h-8 rounded-full ${item.iconBg} flex items-center justify-center`}>
-                  <item.icon className="h-3.5 w-3.5 text-white" />
-                </div>
+        {/* Clean Timeline */}
+        <div className="max-w-2xl mx-auto">
+          <div className="relative">
+            {/* Vertical line - visible on all screen sizes */}
+            <div className="absolute left-4 top-8 bottom-8 w-px bg-border/50" />
 
-                {/* Content */}
-                <div className="flex-1 bg-card rounded-xl border border-border/30 p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${item.statusBg} ${item.statusText}`}>
-                      {item.status}
-                    </span>
+            <div className="space-y-6">
+              {timelineItems.map((item, index) => (
+                <motion.div
+                  key={item.number}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  className="relative flex gap-4 md:gap-6"
+                >
+                  {/* Number circle */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.1 + 0.2,
+                      ease: "backOut"
+                    }}
+                    className="flex-shrink-0 w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center font-bold text-sm relative z-10"
+                  >
+                    {item.number}
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-1.5 pb-2">
+                    <h3 className="font-semibold text-foreground text-sm mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      {item.subtitle}
+                    </p>
                   </div>
-                  <h3 className="text-sm font-semibold text-foreground mb-3">{item.title}</h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {item.chips.map((chip) => (
-                      <span key={chip} className="px-2 py-0.5 rounded-full bg-muted text-[10px] text-muted-foreground">
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

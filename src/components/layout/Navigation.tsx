@@ -1,52 +1,19 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import klarnowLogo from "@/assets/klarnow-logo.svg";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const PHONE_NUMBER = "+441616960976";
 const PHONE_DISPLAY = "+44 161 696 0976";
 
-interface NavDropdownProps {
-  label: string;
-  items: { label: string; href: string }[];
-  isOpen: boolean;
-  onToggle: () => void;
-  onClose: () => void;
-}
-
-const NavDropdown = ({ label, items, isOpen, onToggle, onClose }: NavDropdownProps) => (
-  <div className="relative">
-    <button
-      onClick={onToggle}
-      className="flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors font-medium text-sm py-2"
-      aria-expanded={isOpen}
-    >
-      {label}
-      <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200", isOpen && "rotate-180")} />
-    </button>
-    {isOpen && (
-      <>
-        <div className="fixed inset-0 z-40" onClick={onClose} />
-        <div className="absolute top-full left-0 mt-2 w-48 bg-card rounded-xl border border-border/30 shadow-xl p-1.5 z-50 animate-scale-in">
-          {items.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
-              onClick={onClose}
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </>
-    )}
-  </div>
-);
-
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -57,37 +24,13 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = {
-    products: {
-      label: "Products",
-      items: [
-        { label: "Instant Receptionist", href: "#instant-receptionist" },
-        { label: "Call-First System", href: "#how-it-works" },
-        { label: "Brand OS", href: "#brand-os" },
-      ],
-    },
-    company: {
-      label: "Company",
-      items: [
-        { label: "Results", href: "#results" },
-        { label: "About", href: "#about" },
-        { label: "Contact", href: `tel:${PHONE_NUMBER}` },
-      ],
-    },
-    enterprise: {
-      label: "Enterprise",
-      items: [
-        { label: "Multi-location", href: "#enterprise" },
-        { label: "Custom workflows", href: "#enterprise" },
-      ],
-    },
-  };
-
-  const toggleDropdown = (key: string) => {
-    setOpenDropdown(openDropdown === key ? null : key);
-  };
-
-  const closeDropdowns = () => setOpenDropdown(null);
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "14-Day System", href: "/system" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Results", href: "/results" },
+    { label: "About", href: "/about" },
+  ];
 
   return (
     <>
@@ -104,39 +47,27 @@ const Navigation = () => {
         <div className="container-wide">
           <div className="flex items-center justify-between h-14 md:h-16">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2 text-base font-bold text-foreground tracking-tight">
-              Klarnow
-            </a>
+            <Link href="/" className="flex items-center">
+              <img src={klarnowLogo.src || klarnowLogo} alt="Klarnow" className="h-3.5 md:h-4 w-auto" />
+            </Link>
 
             {/* Desktop Navigation - Center */}
-            <div className="hidden lg:flex items-center gap-6">
-              <NavDropdown
-                label={navItems.products.label}
-                items={navItems.products.items}
-                isOpen={openDropdown === "products"}
-                onToggle={() => toggleDropdown("products")}
-                onClose={closeDropdowns}
-              />
-              <NavDropdown
-                label={navItems.company.label}
-                items={navItems.company.items}
-                isOpen={openDropdown === "company"}
-                onToggle={() => toggleDropdown("company")}
-                onClose={closeDropdowns}
-              />
-              <NavDropdown
-                label={navItems.enterprise.label}
-                items={navItems.enterprise.items}
-                isOpen={openDropdown === "enterprise"}
-                onToggle={() => toggleDropdown("enterprise")}
-                onClose={closeDropdowns}
-              />
+            <div className="hidden lg:flex items-center gap-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <a 
-                href={`tel:${PHONE_NUMBER}`} 
+              <a
+                href={`tel:${PHONE_NUMBER}`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-foreground/20 text-foreground hover:border-foreground/40 hover:bg-muted/30 transition-all"
               >
                 Call now
@@ -156,33 +87,79 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border/30">
-            <div className="container-wide py-4 space-y-4">
-              {Object.entries(navItems).map(([key, { label, items }]) => (
-                <div key={key} className="space-y-1">
-                  <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{label}</p>
-                  {items.map((item) => (
-                    <a
-                      key={item.label}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border/30 overflow-hidden"
+            >
+              <motion.div
+                className="container-wide py-4 space-y-2"
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={{
+                  open: {
+                    transition: { staggerChildren: 0.05, delayChildren: 0.1 }
+                  },
+                  closed: {
+                    transition: { staggerChildren: 0.03, staggerDirection: -1 }
+                  }
+                }}
+              >
+                {navItems.map((item) => (
+                  <motion.div
+                    key={item.label}
+                    variants={{
+                      open: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.2 }
+                      },
+                      closed: {
+                        opacity: 0,
+                        y: -10,
+                        transition: { duration: 0.2 }
+                      }
+                    }}
+                  >
+                    <Link
                       href={item.href}
-                      className="block py-1.5 text-sm text-foreground/70 hover:text-foreground transition-colors"
+                      className="block py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
+                    </Link>
+                  </motion.div>
+                ))}
+                <motion.div
+                  variants={{
+                    open: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.2 }
+                    },
+                    closed: {
+                      opacity: 0,
+                      y: -10,
+                      transition: { duration: 0.2 }
+                    }
+                  }}
+                >
+                  <Button variant="hero" size="default" className="w-full mt-3" asChild>
+                    <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-2">
+                      Call now
+                      <ArrowRight className="h-4 w-4" />
                     </a>
-                  ))}
-                </div>
-              ))}
-              <Button variant="hero" size="default" className="w-full mt-3" asChild>
-                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-2">
-                  Call now
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        )}
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       {/* Mobile Sticky Call Bar */}

@@ -19,9 +19,9 @@ const HowItWorks = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section 
+    <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background" 
+      className="section-padding bg-background"
       id="how-it-works"
     >
       <div className="container-wide">

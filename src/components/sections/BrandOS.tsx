@@ -7,37 +7,36 @@ const BrandOS = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section 
+    <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background-subtle" 
+      className="section-padding bg-background-subtle"
       id="brand-os"
     >
       <div className="container-narrow text-center">
         <div className={cn("scroll-fade-in", isVisible && "visible")}>
-          <p className="eyebrow mb-4">Free tool</p>
-          
+          <p className="eyebrow mb-4">Not Ready to Call Yet?</p>
+
           <h2 className="heading-section heading-mixed mb-4">
-            Want the <span className="serif-italic">words</span> first?
+            Generate your <span className="serif-italic">Brand OS</span> in 60 seconds.
           </h2>
-          <p className="text-body max-w-lg mx-auto mb-8">
-            Generate your Brand OS in 60 seconds. Get positioning and messaging you can use today.
+          <p className="text-body max-w-lg mx-auto mb-2">
+            Get positioning, offer clarity, and messaging you can use today. Free. Instant. No email required.
           </p>
-          
+          <p className="text-body max-w-lg mx-auto mb-8 font-medium">
+            Then call when you want the system installed.
+          </p>
+
           <Button variant="hero-secondary" size="lg" asChild>
-            <a 
-              href="https://staging.klarnow.ai" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://staging.klarnow.ai"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              Generate Brand OS
+              Generate my Brand OS
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
-          
-          <p className="text-xs text-muted-foreground mt-3">
-            Built for Instagram posts & ads.
-          </p>
         </div>
       </div>
     </section>
