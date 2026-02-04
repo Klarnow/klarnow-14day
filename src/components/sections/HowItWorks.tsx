@@ -21,24 +21,25 @@ const HowItWorks = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background" 
+      className="section-padding bg-muted/30" 
       id="how-it-works"
     >
       <div className="container-wide">
-        <div className={cn("text-center mb-10 md:mb-14 scroll-fade-in", isVisible && "visible")}>
-          <h2 className="heading-section heading-mixed">
-            Call. See it. <span className="serif-italic">Install.</span>
+        <div className={cn("text-center mb-10 md:mb-12 scroll-fade-in", isVisible && "visible")}>
+          <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">Process</p>
+          <h2 className="heading-section">
+            Call. See it. Install.
           </h2>
         </div>
 
         {/* Steps */}
-        <div className={cn("grid md:grid-cols-3 gap-6 mb-10 md:mb-14 scroll-fade-in", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
-          {steps.map((step) => (
+        <div className={cn("grid md:grid-cols-3 gap-6 mb-10 md:mb-12 scroll-fade-in", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
+          {steps.map((step, i) => (
             <div key={step.title} className="text-center">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted mb-4">
-                <span className="text-sm font-semibold text-foreground">{step.number}</span>
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-background mb-4">
+                <span className="text-sm font-semibold">{step.number}</span>
               </div>
-              <h3 className="text-sm font-semibold text-foreground mb-2">{step.title}</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-1">{step.title}</h3>
               <p className="text-xs text-muted-foreground">{step.description}</p>
             </div>
           ))}
@@ -47,17 +48,17 @@ const HowItWorks = () => {
         {/* Requirements */}
         <div className={cn("max-w-md mx-auto scroll-fade-in", isVisible && "visible")} style={{ transitionDelay: "200ms" }}>
           <div className="bg-card rounded-xl border border-border/30 p-5">
-            <h4 className="font-semibold text-foreground text-sm mb-4">What we need</h4>
-            <div className="grid grid-cols-2 gap-2 mb-4">
+            <h4 className="font-semibold text-foreground text-sm mb-4 text-center">What we need from you</h4>
+            <div className="grid grid-cols-2 gap-2.5 mb-4">
               {requirements.map((req) => (
                 <div key={req} className="flex items-center gap-2">
-                  <Check className="h-3 w-3 text-success flex-shrink-0" />
+                  <Check className="h-3.5 w-3.5 text-success flex-shrink-0" />
                   <span className="text-xs text-muted-foreground">{req}</span>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground">
-              We plug into Cal.com or your calendar.
+            <p className="text-xs text-muted-foreground/70 text-center">
+              We plug into Cal.com or your existing calendar.
             </p>
           </div>
         </div>
