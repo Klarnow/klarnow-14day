@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Sub-head */}
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 animate-fade-in-up leading-relaxed" style={{
           animationDelay: "0.2s"
-        }}>The 14-Day Call-First System that answers and follows up when you're busy. Books appointments. You stay in control.</p>
+        }}>The 14-Day Call-First System that answers calls, books appointments and follows up when you're busy.  </p>
 
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 animate-fade-in-up" style={{
