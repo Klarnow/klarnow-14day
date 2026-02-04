@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container-wide relative">
         <div className="max-w-3xl mx-auto text-center shadow-none my-0">
           {/* Eyebrow */}
-          <p className="eyebrow mb-4 md:mb-6 animate-fade-in">Every enquiry get handled right</p>
+          <p className="eyebrow mb-4 md:mb-6 animate-fade-in my-[27px]">Every enquiry get handled right</p>
 
           {/* Main headline */}
           <h1 className="heading-display mb-4 md:mb-6 animate-fade-in-up" style={{
@@ -17,9 +17,12 @@ const Hero = () => {
           </h1>
 
           {/* Sub-head */}
-          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 animate-fade-in-up leading-relaxed" style={{
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 animate-fade-in-up leading-relaxed text-center" style={{
           animationDelay: "0.2s"
-        }}>The 14-Day Call-First System that answers and follows up when you're busy. Books appointments. You stay in control.</p>
+        }}>The 14-Day Call-First System that answers calls, books appointments and follows up when you're busy.     
+  
+
+        </p>
 
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 animate-fade-in-up" style={{
