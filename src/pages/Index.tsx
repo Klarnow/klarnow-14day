@@ -1,8 +1,10 @@
 import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
-import ProductPreview from "@/components/sections/ProductPreview";
+import LogoBar from "@/components/sections/LogoBar";
+import Testimonial from "@/components/sections/Testimonial";
 import Problem from "@/components/sections/Problem";
 import Solution from "@/components/sections/Solution";
+import Features from "@/components/sections/Features";
 import Modules from "@/components/sections/Modules";
 import HumanControl from "@/components/sections/HumanControl";
 import HowItWorks from "@/components/sections/HowItWorks";
@@ -19,9 +21,11 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <ProductPreview />
+        <LogoBar />
+        <Testimonial />
         <Problem />
         <Solution />
+        <Features />
         <Modules />
         <HumanControl />
         <HowItWorks />

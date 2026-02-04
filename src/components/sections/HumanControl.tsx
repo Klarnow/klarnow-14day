@@ -21,13 +21,15 @@ const HumanControl = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column */}
           <div className={cn("scroll-fade-left", isVisible && "visible")}>
-            <p className="eyebrow mb-4">Control</p>
-            <h2 className="heading-section heading-mixed mb-6">
-              AI works.<br />
-              <span className="serif-italic">You control.</span>
+            <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">Control</p>
+            <h2 className="heading-section mb-4">
+              AI works.{" "}
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary text-primary-foreground text-base md:text-lg">
+                You control.
+              </span>
             </h2>
 
-            <div className="space-y-3">
+            <div className="space-y-3 mt-6">
               {controls.map((control) => (
                 <div key={control} className="flex items-center gap-3">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
@@ -40,7 +42,7 @@ const HumanControl = () => {
           </div>
 
           {/* Right Column */}
-          <div className={cn("bg-card rounded-xl border border-border/30 p-5 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
+          <div className={cn("bg-muted/30 rounded-xl border border-border/30 p-5 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
             <div className="flex items-center justify-between mb-4">
               <h4 className="font-semibold text-foreground text-sm">Activity</h4>
               <span className="px-2 py-0.5 rounded-full bg-muted text-[10px] text-muted-foreground">Today</span>
@@ -52,7 +54,7 @@ const HumanControl = () => {
                 { title: "Booking confirmed", desc: "Sarah M. • Tomorrow 2PM", time: "12m ago", action: null },
                 { title: "Follow-up done", desc: "James T. • Not interested", time: "1h ago", action: null },
               ].map((item, i) => (
-                <div key={i} className="flex items-start justify-between p-3 bg-muted/30 rounded-lg">
+                <div key={i} className="flex items-start justify-between p-3 bg-card rounded-lg border border-border/20">
                   <div className="flex-1">
                     <p className="font-medium text-foreground text-xs">{item.title}</p>
                     <p className="text-[10px] text-muted-foreground">{item.desc}</p>
