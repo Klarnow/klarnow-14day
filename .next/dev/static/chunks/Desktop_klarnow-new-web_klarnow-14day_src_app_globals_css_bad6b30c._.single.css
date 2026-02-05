@@ -454,7 +454,7 @@ body {
 .heading-display {
   letter-spacing: -.025em;
   color: hsl(var(--foreground));
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -542,7 +542,7 @@ body {
   background: radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--gradient-pink) / .4), transparent 60%), radial-gradient(ellipse 60% 50% at 70% 50%, hsl(var(--gradient-orange) / .3), transparent 50%), radial-gradient(ellipse 50% 40% at 30% 60%, hsl(var(--gradient-purple) / .25), transparent 50%), hsl(var(--background));
 }
 
-.heading-mixed span.serif-italic {
+.heading-mixed span.serif-italic, .serif-italic {
   font-family: Playfair Display, serif;
   font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
   font-style: italic;
@@ -1736,6 +1736,10 @@ body {
   background-color: hsl(var(--background) / .5);
 }
 
+.bg-background\/80 {
+  background-color: hsl(var(--background) / .8);
+}
+
 .bg-background\/90 {
   background-color: hsl(var(--background) / .9);
 }
@@ -2671,6 +2675,16 @@ body {
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 1;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--gradient-purple)) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .file\:border-0::file-selector-button {

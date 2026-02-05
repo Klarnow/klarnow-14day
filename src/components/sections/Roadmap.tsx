@@ -1,3 +1,4 @@
+"use client";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";

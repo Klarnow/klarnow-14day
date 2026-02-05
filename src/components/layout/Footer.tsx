@@ -1,3 +1,4 @@
+"use client";
 import { ArrowRight } from "lucide-react";
 import logoWhite from "@/assets/klarnow-logo-white.svg";
 import Link from "next/link";
@@ -11,6 +12,7 @@ const footerLinks = {
     links: [
       { label: "Brand OS", href: "https://staging.klarnow.ai" },
       { label: "Custom Services", href: "/custom-services" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   legal: {

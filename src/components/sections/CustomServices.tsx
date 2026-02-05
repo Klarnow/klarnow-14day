@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Database, GitBranch, Share2, PieChart } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";

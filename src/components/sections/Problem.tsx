@@ -1,3 +1,4 @@
+"use client";
 import { PhoneMissed, Clock, UserX, Eye } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";

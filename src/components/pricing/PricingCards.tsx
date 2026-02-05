@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 
@@ -6,7 +7,7 @@ const PHONE_NUMBER = "+441616960976";
 export const pricingPackages = [
     {
         name: "Instant Receptionist",
-        price: "$995",
+        price: "£995",
         bestFor: "You miss calls or lose after-hours enquiries.",
         promise: "Stop the bleeding today.",
         features: [
@@ -17,7 +18,7 @@ export const pricingPackages = [
     },
     {
         name: "14-Day System + Traffic",
-        price: "$2,795",
+        price: "£2,795",
         bestFor: "You want the full fix + launch support.",
         promise: "Turn it on and scale it.",
         features: [
@@ -31,11 +32,11 @@ export const pricingPackages = [
     },
     {
         name: "System + Traffic + Pro Content",
-        price: "$3,995",
+        price: "£3,995",
         bestFor: "You're launching or relaunching properly.",
         promise: "Launch like you mean it.",
         features: [
-            "Everything in the $2,795 package",
+            "Everything in the £2,795 package",
             "Professional shoot",
             "12 edited vertical clips (9:16) for ads and social"
         ]

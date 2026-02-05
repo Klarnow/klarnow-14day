@@ -1,8 +1,10 @@
 import "./globals.css";
 import { Providers } from "./providers";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
 const playfair = Playfair_Display({
     subsets: ["latin"],
     variable: '--font-playfair-display',
@@ -20,8 +22,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`${inter.className} ${playfair.variable} antialiased`}>
-                <Providers>{children}</Providers>
+            <body className={`${bricolage.className} ${playfair.variable} antialiased`}>
+                <Providers>
+                    <Navigation />
+                    {children}
+                    <Footer />
+                </Providers>
             </body>
         </html>
     );

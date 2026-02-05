@@ -219,7 +219,7 @@
 
   /* Typography - Modern with Serif Accents */
   .heading-display {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1];
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1];
   }
 
   .heading-section {
@@ -289,7 +289,8 @@
   }
 
   /* Mixed typography heading */
-  .heading-mixed span.serif-italic {
+  .heading-mixed span.serif-italic,
+  .serif-italic {
     @apply font-serif italic font-normal;
   }
 }
@@ -391,6 +392,6 @@
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-[hsl(var(--klarnow-purple-light))] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-[hsl(var(--gradient-purple))] bg-clip-text text-transparent;
   }
 }

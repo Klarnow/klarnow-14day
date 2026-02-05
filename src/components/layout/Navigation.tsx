@@ -94,7 +94,7 @@ const Navigation = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border/30 overflow-hidden"
+              className="lg:hidden bg-muted/60 backdrop-blur-xl border-t border-border/30 overflow-hidden"
             >
               <motion.div
                 className="container-wide py-4 space-y-2"

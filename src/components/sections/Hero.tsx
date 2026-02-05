@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
 const PHONE_NUMBER = "+441616960976";
 const trustChips = ["Installed in 14 days", "4 slots per month", "See it live on the call"];
 const Hero = () => {
@@ -13,7 +16,8 @@ const Hero = () => {
         <h1 className="heading-display mb-4 md:mb-6 animate-fade-in-up" style={{
           animationDelay: "0.1s"
         }}>
-          You're not missing leads.<br />You're leaking bookings.
+          You're not missing leads.<br />
+          <span className="serif-italic gradient-text">You're leaking bookings.</span>
         </h1>
 
         {/* Sub-head */}
