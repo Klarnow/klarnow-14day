@@ -687,16 +687,26 @@ const Navigation = ()=>{
     _s();
     const [isScrolled, setIsScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isNearFooter, setIsNearFooter] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             const handleScroll = {
                 "Navigation.useEffect.handleScroll": ()=>{
                     setIsScrolled(window.scrollY > 20);
+                    // Check if near footer
+                    const footer = document.querySelector('footer');
+                    if (footer) {
+                        const footerRect = footer.getBoundingClientRect();
+                        const windowHeight = window.innerHeight;
+                        // If footer is within 100px of viewport bottom
+                        setIsNearFooter(footerRect.top < windowHeight + 100);
+                    }
                 }
             }["Navigation.useEffect.handleScroll"];
             window.addEventListener("scroll", handleScroll, {
                 passive: true
             });
+            handleScroll(); // Initial check
             return ({
                 "Navigation.useEffect": ()=>window.removeEventListener("scroll", handleScroll)
             })["Navigation.useEffect"];
@@ -745,12 +755,12 @@ const Navigation = ()=>{
                                         className: "h-3.5 md:h-4 w-auto"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 62,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -761,12 +771,12 @@ const Navigation = ()=>{
                                             children: item.label
                                         }, item.label, false, {
                                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                            lineNumber: 57,
+                                            lineNumber: 68,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 66,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -780,18 +790,18 @@ const Navigation = ()=>{
                                                 className: "h-3.5 w-3.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                                lineNumber: 74,
+                                                lineNumber: 85,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 80,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 79,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -802,29 +812,29 @@ const Navigation = ()=>{
                                         className: "h-5 w-5"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 95,
                                         columnNumber: 35
                                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                         className: "h-5 w-5"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 95,
                                         columnNumber: 63
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                    lineNumber: 79,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                            lineNumber: 48,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                        lineNumber: 47,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -890,12 +900,12 @@ const Navigation = ()=>{
                                                 children: item.label
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                                lineNumber: 129,
+                                                lineNumber: 140,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, item.label, false, {
                                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                            lineNumber: 114,
+                                            lineNumber: 125,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -929,53 +939,53 @@ const Navigation = ()=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                                        lineNumber: 155,
+                                                        lineNumber: 166,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 164,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                            lineNumber: 152,
+                                            lineNumber: 163,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 149,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                lineNumber: 99,
+                                lineNumber: 110,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                            lineNumber: 92,
+                            lineNumber: 103,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                        lineNumber: 90,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                lineNumber: 37,
+                lineNumber: 48,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/30 p-2.5 safe-area-pb",
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("fixed bottom-0 left-0 right-0 z-50 lg:hidden backdrop-blur-xl border-t p-2.5 safe-area-pb transition-all duration-300", isNearFooter ? "bg-foreground border-foreground/20" : "bg-background/95 border-border/30"),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                    variant: "hero",
+                    variant: isNearFooter ? "outline" : "hero",
                     size: "default",
-                    className: "w-full",
+                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full transition-all duration-300", isNearFooter && "bg-background text-foreground border-background hover:bg-background/90"),
                     asChild: true,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: `tel:${PHONE_NUMBER}`,
@@ -987,29 +997,29 @@ const Navigation = ()=>{
                                 className: "h-4 w-4"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                                lineNumber: 170,
+                                lineNumber: 196,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                        lineNumber: 168,
+                        lineNumber: 194,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                    lineNumber: 167,
+                    lineNumber: 185,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/layout/Navigation.tsx",
-                lineNumber: 166,
+                lineNumber: 177,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true);
 };
-_s(Navigation, "0+zEKVBL95ILuBb5rHE6ViYOHu8=");
+_s(Navigation, "1gvye+CyWY0eOT260DuoeE/nmqo=");
 _c = Navigation;
 const __TURBOPACK__default__export__ = Navigation;
 var _c;

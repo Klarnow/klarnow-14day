@@ -1704,6 +1704,10 @@ body {
   border-color: #0000;
 }
 
+.border-background {
+  border-color: hsl(var(--background));
+}
+
 .border-l-transparent {
   border-left-color: #0000;
 }
@@ -2849,6 +2853,10 @@ body {
 
 .hover\:bg-transparent:hover {
   background-color: #0000;
+}
+
+.hover\:bg-background\/90:hover {
+  background-color: hsl(var(--background) / .9);
 }
 
 .hover\:text-accent-foreground:hover {

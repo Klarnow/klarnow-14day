@@ -15,12 +15,23 @@ const PHONE_DISPLAY = "+44 161 696 0976";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isNearFooter, setIsNearFooter] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      
+      // Check if near footer
+      const footer = document.querySelector('footer');
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        // If footer is within 100px of viewport bottom
+        setIsNearFooter(footerRect.top < windowHeight + 100);
+      }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -163,8 +174,23 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Sticky Call Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/30 p-2.5 safe-area-pb">
-        <Button variant="hero" size="default" className="w-full" asChild>
+      <div 
+        className={cn(
+          "fixed bottom-0 left-0 right-0 z-50 lg:hidden backdrop-blur-xl border-t p-2.5 safe-area-pb transition-all duration-300",
+          isNearFooter 
+            ? "bg-foreground border-foreground/20" 
+            : "bg-background/95 border-border/30"
+        )}
+      >
+        <Button 
+          variant={isNearFooter ? "outline" : "hero"} 
+          size="default" 
+          className={cn(
+            "w-full transition-all duration-300",
+            isNearFooter && "bg-background text-foreground border-background hover:bg-background/90"
+          )}
+          asChild
+        >
           <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-2 text-sm">
             Call {PHONE_DISPLAY}
             <ArrowRight className="h-4 w-4" />
