@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Database, GitBranch, Share2, PieChart } from "lucide-react";
+    import { ArrowRight, MapPin, Database, GitBranch, Share2, PieChart, Grid2X2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +12,7 @@ const services = [
     { icon: GitBranch, title: "Full funnel rebuilds", description: "Conversion testing & optimization." },
     { icon: Share2, title: "Ad creative systems", description: "Content pipelines & systems." },
     { icon: PieChart, title: "Sales restructuring", description: "Follow-up & process overhaul." },
+    { icon: Grid2X2, title: "Brand System", description: "Brand Strategy, Identity and positioning." },
 ];
 
 const CustomServices = () => {

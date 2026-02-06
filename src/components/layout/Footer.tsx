@@ -11,6 +11,7 @@ const footerLinks = {
     title: "Resources",
     links: [
       { label: "Brand OS", href: "https://staging.klarnow.ai" },
+      { label: "Brand System", href: "https://brand.klarnow.co.uk/" },
       { label: "Custom Services", href: "/custom-services" },
       { label: "Contact", href: "/contact" },
     ],

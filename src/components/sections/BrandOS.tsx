@@ -10,12 +10,12 @@ const BrandOS = () => {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background-subtle"
+      className="section-padding hero-gradient"
       id="brand-os"
     >
       <div className="container-narrow text-center">
         <div className={cn("scroll-fade-in", isVisible && "visible")}>
-          <p className="eyebrow mb-4">Not Ready to Call Yet?</p>
+          <p className="eyebrow mb-4">We launching soon, be one of the first to</p>
 
           <h2 className="heading-section heading-mixed mb-4">
             Generate your <span className="serif-italic">Brand OS</span> in 60 seconds.

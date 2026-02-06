@@ -10,14 +10,14 @@ const Hero = () => {
     <div className="container-wide relative">
       <div className="max-w-3xl mx-auto text-center shadow-none my-0">
         {/* Eyebrow */}
-        <p className="eyebrow mb-4 md:mb-6 animate-fade-in">Every enquiry get handled right</p>
+        {/* <p className="eyebrow mb-4 md:mb-6 animate-fade-in">Every enquiry get handled right</p> */}
 
         {/* Main headline */}
-        <h1 className="heading-display mb-4 md:mb-6 animate-fade-in-up" style={{
+        <h1 className="heading-display mt-[80px] md:mt-[100px] mb-4 md:mb-6 animate-fade-in-up left-align" style={{
           animationDelay: "0.1s"
         }}>
-          You're not missing leads.<br />
-          <span className="serif-italic gradient-text">You're leaking bookings.</span>
+          Every enquiry <br />
+          <span className=" gradient-text">  gets handled right.</span>
         </h1>
 
         {/* Sub-head */}

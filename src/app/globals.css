@@ -16,8 +16,8 @@
     /* Gradient Colors - Soft & Warm */
     --gradient-pink: 340 80% 75%;
     --gradient-orange: 25 90% 70%;
-    --gradient-yellow: 45 95% 70%;
-    --gradient-purple: 280 70% 75%;
+    --gradient-purple: 256 82% 64%;
+    --gradient-purple: 256 82% 64%;
 
     /* Backgrounds */
     --background: 0 0% 100%;
@@ -219,7 +219,7 @@
 
   /* Typography - Modern with Serif Accents */
   .heading-display {
-    @apply text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1];
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1];
   }
 
   .heading-section {
@@ -240,11 +240,10 @@
 
   /* Soft gradient hero background */
   .hero-gradient {
-    background:
-      radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--gradient-pink) / 0.4), transparent 60%),
-      radial-gradient(ellipse 60% 50% at 70% 50%, hsl(var(--gradient-orange) / 0.3), transparent 50%),
-      radial-gradient(ellipse 50% 40% at 30% 60%, hsl(var(--gradient-purple) / 0.25), transparent 50%),
-      hsl(var(--background));
+    background: radial-gradient(ellipse at center, 
+      #8359ee20 0%, 
+      hsl(var(--background)) 70%
+    );
   }
 
   /* Colorful bottom gradient */
@@ -393,5 +392,57 @@
   /* Gradient text */
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-[hsl(var(--gradient-purple))] bg-clip-text text-transparent;
+  }
+
+  /* Pulse glow animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+  }
+
+  /* Ring/vibrate animation */
+  @keyframes ring {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(-15deg);
+    }
+    20% {
+      transform: rotate(15deg);
+    }
+    30% {
+      transform: rotate(-15deg);
+    }
+    40% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(-5deg);
+    }
+    80% {
+      transform: rotate(5deg);
+    }
+    90% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-ring {
+    animation: ring 0.6s ease-in-out;
   }
 }

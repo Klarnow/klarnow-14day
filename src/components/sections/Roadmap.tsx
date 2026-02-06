@@ -2,32 +2,47 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { Check, Clock, Zap, Monitor  } from "lucide-react";
 
 const timelineItems = [
   {
-    number: "1",
-    title: "A mobile conversion page with one clear next step",
-    subtitle: "Fit Check → audit booking flow"
+    
+    title: "Leak map and build plan",
+    description: "We audit where enquiries are breaking down and map out what gets built.",
+    status: "Days 1–3",
+    statusColor: "success",
+    icon: Check,
+    iconBg: "bg-success",
+    tags: ["Audit", "Planning", "Mapping"]
   },
   {
-    number: "2",
-    title: "Follow-up messages",
-    subtitle: "That nudge non-responders and reduce no-shows"
+    title: "Build and integration",
+    description: "We build your call-first page, install the Instant Receptionist, connect your booking system, and set up follow-up automation.",
+    status: "Days 4–11",
+    statusColor: "warning",
+    icon: Clock,
+    iconBg: "bg-amber-500",
+    tags: ["Development", "Integration", "Automation"]
   },
   {
-    number: "3",
-    title: "Owner Dashboard",
-    subtitle: "Pipeline + follow-up due list"
+    
+    title: "Go-live (Traffic switch-on)",
+    description: "Your system goes live. Traffic starts hitting it. We monitor in real-time.",
+    status: "Day 12",
+    statusColor: "muted",
+    icon: Zap,
+    iconBg: "bg-muted-foreground",
+    tags: ["Launch", "Monitoring", "Live"]
   },
   {
-    number: "4",
-    title: "Tracking",
-    subtitle: "So you can see what is working"
-  },
-  {
-    number: "5",
-    title: "Missed Call Capture (included)",
-    subtitle: "Inbound call handling that captures details and routes to booking or callback"
+    
+    title: "Monitoring and handover",
+    description: "We watch performance, handle any issues, and hand over full control to you.",
+    status: "Days 13–14",
+    statusColor: "muted",
+    icon: Monitor,
+    iconBg: "bg-muted-foreground",
+    tags: ["Support", "Handover", "Training"]
   }
 ];
 
@@ -46,21 +61,19 @@ const Roadmap = () => {
           <h2 className="heading-section heading-mixed mb-3">
             What's <span className="serif-italic">next</span>
           </h2>
-          <p className="text-body max-w-md mx-auto">
+          <p className="text-body max-w-2xl mx-auto">
             A mobile conversion page with one clear next step
           </p>
         </div>
 
-        {/* Clean Timeline */}
-        <div className="max-w-2xl mx-auto">
-          <div className="relative">
-            {/* Vertical line - visible on all screen sizes */}
-            <div className="absolute left-4 top-8 bottom-8 w-px bg-border/50" />
-
-            <div className="space-y-6">
-              {timelineItems.map((item, index) => (
+        {/* Vertical Roadmap */}
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-6">
+            {timelineItems.map((item, index) => {
+              const Icon = item.icon;
+              return (
                 <motion.div
-                  key={item.number}
+                  key={item.days}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
@@ -69,35 +82,64 @@ const Roadmap = () => {
                     delay: index * 0.1,
                     ease: "easeOut"
                   }}
-                  className="relative flex gap-4 md:gap-6"
+                  className="flex gap-4 md:gap-6"
                 >
-                  {/* Number circle */}
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{
-                      duration: 0.4,
-                      delay: index * 0.1 + 0.2,
-                      ease: "backOut"
-                    }}
-                    className="flex-shrink-0 w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center font-bold text-sm relative z-10"
-                  >
-                    {item.number}
-                  </motion.div>
+                  {/* Icon - Outside the box */}
+                  <div className="flex-shrink-0">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.1 + 0.2,
+                        ease: "backOut"
+                      }}
+                      className={cn(
+                        "w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white",
+                        item.iconBg
+                      )}
+                    >
+                      <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                    </motion.div>
+                  </div>
 
-                  {/* Content */}
-                  <div className="flex-1 pt-1.5 pb-2">
-                    <h3 className="font-semibold text-foreground text-sm mb-1">
+                  {/* Content - Inside the box */}
+                  <div className="flex-1 p-5 md:p-6 rounded-lg border border-border/50">
+                    {/* Status badge */}
+                    <div className="mb-4">
+                      <span
+                        className={cn(
+                          "inline-block px-3 py-1.5 rounded-full text-xs font-medium",
+                          item.statusColor === "success" && "bg-success/10 text-success",
+                          item.statusColor === "warning" && "bg-amber-500/10 text-amber-600",
+                          item.statusColor === "muted" && "bg-muted text-muted-foreground"
+                        )}
+                      >
+                        {item.status}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-semibold text-foreground text-lg md:text-xl mb-4 leading-tight">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground">
-                      {item.subtitle}
-                    </p>
+
+                    {/* Tags with Days */}
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-flex px-3 py-1.5 rounded-full bg-muted/60 text-muted-foreground text-xs whitespace-nowrap"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

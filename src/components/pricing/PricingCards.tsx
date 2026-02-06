@@ -38,7 +38,7 @@ export const pricingPackages = [
         features: [
             "Everything in the £2,795 package",
             "Professional shoot",
-            "12 edited vertical clips (9:16) for ads and social"
+            "12 edited clips for ads, conversion page and social"
         ]
     }
 ];
@@ -100,7 +100,7 @@ export const PricingCards = ({ showCTA = true }: PricingCardsProps) => {
                 ))}
             </div>
 
-            <div className="mt-12 max-w-4xl mx-auto p-6 bg-muted/30 rounded-xl space-y-2">
+            <div className="mt-12 max-w-6xl mx-auto p-6 rounded-xl space-y-2 text-center">
                 <p className="text-sm text-muted-foreground">
                     <strong>Note:</strong> Software subscriptions and ad spend are paid by you directly.
                 </p>

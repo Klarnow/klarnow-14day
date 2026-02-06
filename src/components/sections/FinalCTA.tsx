@@ -21,9 +21,14 @@ const FinalCTA = ({ title, subhead }: FinalCTAProps) => {
     >
       <div className={cn("hero-gradient h-48 md:h-64 flex items-center justify-center scroll-fade-in", isVisible && "visible")}>
         <div className="text-center px-5">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground/90 mb-5">
-            {title || "Stop leaking bookings?"}
-          </h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground/90 mb-5">
+  {title || (
+    <>
+      <span className="italic">Still Scrolling?<br/></span> hit the{" "}
+    </>
+  )}
+ <span className="serif-italic">DAMN</span> button
+</h2>
           <Button variant="hero" size="lg" asChild className="bg-foreground text-background hover:bg-foreground/90">
             <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
               Call now

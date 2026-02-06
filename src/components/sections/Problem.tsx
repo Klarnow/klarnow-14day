@@ -41,13 +41,11 @@ const Problem = () => {
           <div className={cn("max-w-md scroll-fade-left", isVisible && "visible")}>
             <p className="eyebrow mb-4">The Problem</p>
             <h2 className="heading-section mb-4">
-              You already do the hard part, getting people interested.
+              You already do the hard part, getting people interested. <span className="serif-italic">If not,<br /> we help you.</span>
             </h2>
-            <p className="text-body mb-2">
-              Then the leak happens.
-            </p>
+          
             <p className="text-body font-medium">
-              This isn't a lead problem. It's a conversion problem.
+              The problem isn't leads. It's <span className="serif-italic font-bold text-md">conversion</span> 
             </p>
           </div>
 

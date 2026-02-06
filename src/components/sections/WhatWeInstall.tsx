@@ -5,12 +5,11 @@ import { cn } from "@/lib/utils";
 
 const features = [
     "Call-first landing page with one clear action",
-    "Instant Receptionist for missed calls and after-hours",
-    "Booking flow (Cal.com or your current tool)",
+    "Instant Receptionist that answers all calls, books appointments, and follows up when you're busy",
     "Follow-up automation for unbooked enquiries",
     "Confirmations and reminders",
     "No-show recovery",
-    "Owner visibility—every lead timestamped, logged, with next action",
+    "Owner visibility every lead timestamped, logged, with next action",
 ];
 
 const WhatWeInstall = () => {
