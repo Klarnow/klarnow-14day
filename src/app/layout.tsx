@@ -14,6 +14,9 @@ const playfair = Playfair_Display({
 export const metadata = {
     title: "Klarnow",
     description: "Story-led System Powered by AI",
+    icons: {
+        icon: '/favicon.svg',
+    },
 };
 
 export default function RootLayout({
