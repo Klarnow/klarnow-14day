@@ -1356,10 +1356,10 @@ const Roadmap = ()=>{
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex flex-wrap gap-2",
-                                                children: item.tags.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: item.tags.map((tag, tagIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "inline-flex px-3 py-1.5 rounded-full bg-muted/60 text-muted-foreground text-xs whitespace-nowrap",
                                                         children: tag
-                                                    }, tag, false, {
+                                                    }, `${index}-${tagIndex}`, false, {
                                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
                                                         lineNumber: 131,
                                                         columnNumber: 25
@@ -1376,7 +1376,7 @@ const Roadmap = ()=>{
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
-                            }, item.days, true, {
+                            }, `roadmap-${index}`, true, {
                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
                                 lineNumber: 75,
                                 columnNumber: 17

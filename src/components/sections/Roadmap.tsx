@@ -69,11 +69,11 @@ const Roadmap = () => {
         {/* Vertical Roadmap */}
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
-            {timelineItems.map((item, index) => {
+              {timelineItems.map((item, index) => {
               const Icon = item.icon;
               return (
                 <motion.div
-                  key={item.days}
+                  key={`roadmap-${index}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
@@ -125,11 +125,11 @@ const Roadmap = () => {
                       {item.title}
                     </h3>
 
-                    {/* Tags with Days */}
+                    {/* Tags */}
                     <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag) => (
+                      {item.tags.map((tag, tagIndex) => (
                         <span
-                          key={tag}
+                          key={`${index}-${tagIndex}`}
                           className="inline-flex px-3 py-1.5 rounded-full bg-muted/60 text-muted-foreground text-xs whitespace-nowrap"
                         >
                           {tag}
