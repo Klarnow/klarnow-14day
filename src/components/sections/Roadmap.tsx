@@ -6,14 +6,12 @@ import { Check, Clock, Zap, Monitor  } from "lucide-react";
 
 const timelineItems = [
   {
-    
     title: "Leak map and build plan",
     description: "We audit where enquiries are breaking down and map out what gets built.",
     status: "Days 1–3",
     statusColor: "success",
     icon: Check,
-    iconBg: "bg-success",
-    tags: ["Audit", "Planning", "Mapping"]
+    iconBg: "bg-success"
   },
   {
     title: "Build and integration",
@@ -21,28 +19,23 @@ const timelineItems = [
     status: "Days 4–11",
     statusColor: "warning",
     icon: Clock,
-    iconBg: "bg-amber-500",
-    tags: ["Development", "Integration", "Automation"]
+    iconBg: "bg-amber-500"
   },
   {
-    
     title: "Go-live (Traffic switch-on)",
     description: "Your system goes live. Traffic starts hitting it. We monitor in real-time.",
     status: "Day 12",
     statusColor: "muted",
     icon: Zap,
-    iconBg: "bg-muted-foreground",
-    tags: ["Launch", "Monitoring", "Live"]
+    iconBg: "bg-muted-foreground"
   },
   {
-    
     title: "Monitoring and handover",
     description: "We watch performance, handle any issues, and hand over full control to you.",
     status: "Days 13–14",
     statusColor: "muted",
     icon: Monitor,
-    iconBg: "bg-muted-foreground",
-    tags: ["Support", "Handover", "Training"]
+    iconBg: "bg-muted-foreground"
   }
 ];
 
@@ -121,21 +114,9 @@ const Roadmap = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground text-lg md:text-xl mb-4 leading-tight">
+                    <h3 className="font-semibold text-foreground text-lg md:text-xl leading-tight">
                       {item.title}
                     </h3>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag, tagIndex) => (
-                        <span
-                          key={`${index}-${tagIndex}`}
-                          className="inline-flex px-3 py-1.5 rounded-full bg-muted/60 text-muted-foreground text-xs whitespace-nowrap"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </motion.div>
               );

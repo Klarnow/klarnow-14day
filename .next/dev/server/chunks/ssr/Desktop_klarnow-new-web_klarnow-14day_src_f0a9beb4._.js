@@ -1102,12 +1102,7 @@ const timelineItems = [
         status: "Days 1–3",
         statusColor: "success",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"],
-        iconBg: "bg-success",
-        tags: [
-            "Audit",
-            "Planning",
-            "Mapping"
-        ]
+        iconBg: "bg-success"
     },
     {
         title: "Build and integration",
@@ -1115,12 +1110,7 @@ const timelineItems = [
         status: "Days 4–11",
         statusColor: "warning",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"],
-        iconBg: "bg-amber-500",
-        tags: [
-            "Development",
-            "Integration",
-            "Automation"
-        ]
+        iconBg: "bg-amber-500"
     },
     {
         title: "Go-live (Traffic switch-on)",
@@ -1128,12 +1118,7 @@ const timelineItems = [
         status: "Day 12",
         statusColor: "muted",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"],
-        iconBg: "bg-muted-foreground",
-        tags: [
-            "Launch",
-            "Monitoring",
-            "Live"
-        ]
+        iconBg: "bg-muted-foreground"
     },
     {
         title: "Monitoring and handover",
@@ -1141,12 +1126,7 @@ const timelineItems = [
         status: "Days 13–14",
         statusColor: "muted",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$monitor$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Monitor$3e$__["Monitor"],
-        iconBg: "bg-muted-foreground",
-        tags: [
-            "Support",
-            "Handover",
-            "Training"
-        ]
+        iconBg: "bg-muted-foreground"
     }
 ];
 const Roadmap = ()=>{
@@ -1166,7 +1146,7 @@ const Roadmap = ()=>{
                             children: "Roadmap"
                         }, void 0, false, {
                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                            lineNumber: 60,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1178,13 +1158,13 @@ const Roadmap = ()=>{
                                     children: "next"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 55,
                                     columnNumber: 20
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                            lineNumber: 61,
+                            lineNumber: 54,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1192,13 +1172,13 @@ const Roadmap = ()=>{
                             children: "A mobile conversion page with one clear next step"
                         }, void 0, false, {
                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                            lineNumber: 64,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                    lineNumber: 59,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1250,17 +1230,17 @@ const Roadmap = ()=>{
                                                 className: "w-6 h-6 md:w-7 md:h-7"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 96,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 82,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 81,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1273,69 +1253,54 @@ const Roadmap = ()=>{
                                                     children: item.status
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 104,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 103,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "font-semibold text-foreground text-lg md:text-xl mb-4 leading-tight",
+                                                className: "font-semibold text-foreground text-lg md:text-xl leading-tight",
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                                lineNumber: 124,
-                                                columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex flex-wrap gap-2",
-                                                children: item.tags.map((tag, tagIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$klarnow$2d$new$2d$web$2f$klarnow$2d$14day$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "inline-flex px-3 py-1.5 rounded-full bg-muted/60 text-muted-foreground text-xs whitespace-nowrap",
-                                                        children: tag
-                                                    }, `${index}-${tagIndex}`, false, {
-                                                        fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                                        lineNumber: 131,
-                                                        columnNumber: 25
-                                                    }, ("TURBOPACK compile-time value", void 0)))
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                                lineNumber: 129,
+                                                lineNumber: 117,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 101,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, `roadmap-${index}`, true, {
                                 fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                                lineNumber: 75,
+                                lineNumber: 68,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0));
                         })
                     }, void 0, false, {
                         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                        lineNumber: 71,
+                        lineNumber: 64,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-                    lineNumber: 70,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-            lineNumber: 58,
+            lineNumber: 51,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/Desktop/klarnow-new-web/klarnow-14day/src/components/sections/Roadmap.tsx",
-        lineNumber: 53,
+        lineNumber: 46,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
