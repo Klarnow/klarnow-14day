@@ -1,9 +1,7 @@
 "use client";
 import { CheckCircle2 } from "lucide-react";
-import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
-import placeholderImage from "@/assets/placeholder-iimage.jpg";
 
 const features = [
     "Call-first landing page with one clear action",
@@ -48,15 +46,13 @@ const WhatWeInstall = () => {
                         </ul>
                     </div>
 
-                    {/* Right Column - Visual */}
-                    <div className={cn("rounded-2xl w-full flex items-center justify-center relative overflow-hidden scroll-fade-in", "aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-full min-h-[260px] sm:min-h-[350px] lg:min-h-[400px]", "max-w-md sm:max-w-lg mx-auto lg:max-w-none lg:mx-0", isVisible && "visible")} style={{ transitionDelay: "200ms" }}>
-                        <Image
-                            src={placeholderImage}
-                            alt="Klarnow - The 14-Day System"
-                            className="object-cover object-left w-full h-full rounded-2xl"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 60vw"
-                            priority
-                        />
+                    {/* Right Column - Visual/Placeholder (Optional, can be removed or replaced with an image later) */}
+                    <div className={cn("bg-muted rounded-2xl aspect-square w-full lg:aspect-auto lg:h-full min-h-[400px] flex items-center justify-center relative overflow-hidden scroll-fade-in", isVisible && "visible")} style={{ transitionDelay: "200ms" }}>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+                        <div className="text-center p-8 relative z-10">
+                            <p className="text-muted-foreground font-medium">System Visual Placeholder</p>
+                            <p className="text-xs text-muted-foreground mt-2">(Dashboard or Flow Diagram)</p>
+                        </div>
                     </div>
                 </div>
             </div>
