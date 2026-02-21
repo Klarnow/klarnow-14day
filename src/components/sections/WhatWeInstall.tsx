@@ -21,8 +21,8 @@ const WhatWeInstall = () => {
             className="section-padding bg-background"
             id="what-we-install"
         >
-            <div className="container-wide">
-                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="container-wide px-5 sm:px-6 lg:px-8 lg:pr-6">
+                <div className="grid grid-cols-1 lg:grid-cols-[0.7fr_1.6fr] gap-8 lg:gap-16 items-center lg:-mr-10">
                     {/* Left Column - Copy */}
                     <div className={cn("max-w-xl scroll-fade-in", isVisible && "visible")}>
                         <p className="eyebrow mb-4">What We Install</p>
