@@ -47,7 +47,7 @@ const Navigation = () => {
     <>
       <nav
         className={cn(
-          "fixed top-[56px] left-0 right-0 z-40 transition-all duration-300 mb-8 md:mb-0",
+          "fixed top-12 sm:top-14 left-0 right-0 z-40 transition-all duration-300 mb-8 md:mb-0",
           isScrolled
             ? "bg-background/90 backdrop-blur-xl border-b border-border/30 shadow-sm"
             : "bg-transparent"
