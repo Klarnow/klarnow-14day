@@ -25,9 +25,9 @@ const CustomServices = () => {
             id="custom-services"
         >
             <div className="container-wide">
-                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start">
                     {/* Left Column */}
-                    <div className={cn("scroll-fade-left", isVisible && "visible")}>
+                    <div className={cn("min-w-0 scroll-fade-left", isVisible && "visible")}>
                         <p className="eyebrow mb-4">Need Something More Complex?</p>
                         <h2 className="heading-section heading-mixed mb-4">
                             Custom <span className="serif-italic">Services</span>
@@ -47,7 +47,7 @@ const CustomServices = () => {
                     </div>
 
                     {/* Right Column */}
-                    <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-4 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
+                    <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-4 min-w-0 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
                         {services.map((service) => (
                             <div key={service.title} className="bg-card rounded-xl border border-border/30 p-5 hover:border-border/60 transition-all duration-300">
                                 <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center mb-3">

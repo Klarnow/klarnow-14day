@@ -36,9 +36,9 @@ const Problem = () => {
       id="problem"
     >
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start">
           {/* Left Column */}
-          <div className={cn("max-w-md scroll-fade-left", isVisible && "visible")}>
+          <div className={cn("max-w-md min-w-0 scroll-fade-left", isVisible && "visible")}>
             <p className="eyebrow mb-4">The Problem</p>
             <h2 className="heading-section mb-4">
               You already do the hard part, getting people interested. <span className="serif-italic">If not,<br /> we help you.</span>
@@ -50,7 +50,7 @@ const Problem = () => {
           </div>
 
           {/* Right Column */}
-          <div className={cn("space-y-3 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
+          <div className={cn("space-y-3 min-w-0 scroll-fade-right", isVisible && "visible")} style={{ transitionDelay: "100ms" }}>
             {problems.map((problem) => (
               <div
                 key={problem.title}

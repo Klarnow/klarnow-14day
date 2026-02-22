@@ -150,11 +150,35 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    width: 100%;
+    min-width: 0;
+    overscroll-behavior-x: none;
+    position: relative;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    overflow-x: clip;
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+    position: relative;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  main {
+    min-width: 0;
+    width: 100%;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
   }
 }
 

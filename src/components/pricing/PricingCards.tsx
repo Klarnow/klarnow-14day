@@ -50,11 +50,11 @@ interface PricingCardsProps {
 export const PricingCards = ({ showCTA = true }: PricingCardsProps) => {
     return (
         <>
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                 {pricingPackages.map((pkg, i) => (
                     <div
                         key={i}
-                        className={`card-premium p-8 flex flex-col ${pkg.featured ? 'ring-1 ring-foreground relative' : ''}`}
+                        className={`card-premium p-6 sm:p-8 flex flex-col min-w-0 ${pkg.featured ? 'ring-1 ring-foreground relative' : ''}`}
                     >
                         {pkg.featured && (
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-foreground text-background text-sm font-medium rounded-full">

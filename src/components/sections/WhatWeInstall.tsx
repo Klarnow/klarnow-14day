@@ -27,7 +27,7 @@ const WhatWeInstall = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[0.7fr_1.3fr] gap-8 lg:gap-16 items-center lg:-mr-10">
           {/* Left Column - Copy */}
           <div
-            className={cn("max-w-xl scroll-fade-in", isVisible && "visible")}
+            className={cn("max-w-xl min-w-0 scroll-fade-in", isVisible && "visible")}
           >
             <p className="eyebrow mb-4">What We Install</p>
             <h2 className="heading-section heading-mixed mb-4">
@@ -54,7 +54,7 @@ const WhatWeInstall = () => {
           {/* Right Column - Visual */}
           <div
             className={cn(
-              "rounded-2xl w-full flex items-center justify-center relative overflow-hidden scroll-fade-in",
+              "rounded-2xl w-full min-w-0 flex items-center justify-center relative overflow-hidden scroll-fade-in",
               "aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-full min-h-[260px] sm:min-h-[350px] lg:min-h-[400px]",
               "max-w-md sm:max-w-lg mx-auto lg:max-w-none lg:mx-0",
               isVisible && "visible",

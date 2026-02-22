@@ -98,7 +98,7 @@ const Roadmap = () => {
                   </div>
 
                   {/* Content - Inside the box */}
-                  <div className="flex-1 p-5 md:p-6 rounded-lg border border-border/50">
+                  <div className="flex-1 min-w-0 p-4 sm:p-5 md:p-6 rounded-lg border border-border/50">
                     {/* Status badge */}
                     <div className="mb-4">
                       <span
@@ -114,7 +114,7 @@ const Roadmap = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground text-lg md:text-xl leading-tight">
+                    <h3 className="font-semibold text-foreground text-base sm:text-lg md:text-xl leading-tight">
                       {item.title}
                     </h3>
                   </div>

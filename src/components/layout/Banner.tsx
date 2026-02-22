@@ -7,9 +7,9 @@ const PHONE_NUMBER = "+441616960976";
 
  export default function Banner() {
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 w-full bg-[#8359ee] text-primary-foreground py-2.5 px-4">
-            <div className="container-wide flex flex-row items-center justify-between gap-4">
-                <p className="text-[14.9px] sm:text-sm font-bold flex-1">
+        <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-[100vw] bg-[#8359ee] text-primary-foreground py-2 sm:py-2.5 px-4 sm:px-6">
+            <div className="container-wide flex flex-row items-center justify-between gap-2 sm:gap-4 min-w-0">
+                <p className="text-xs sm:text-sm font-bold flex-1 min-w-0">
                     See a live demo of the instant receptionist 
                 </p>
                 <Button 

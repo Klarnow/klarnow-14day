@@ -89,11 +89,11 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-background/30">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p className="text-xs sm:text-sm text-background/30">
               © {new Date().getFullYear()} Klarnow. All rights reserved.
             </p>
-            <p className="text-sm text-background/30">
+            <p className="text-xs sm:text-sm text-background/30">
               Built for UK service businesses.
             </p>
           </div>

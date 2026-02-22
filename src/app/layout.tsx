@@ -31,7 +31,9 @@ export default function RootLayout({
                 <Providers>
                     <Banner />
                     <Navigation />
-                    {children}
+                    <main className="min-w-0 w-full overflow-x-hidden">
+                        {children}
+                    </main>
                     <Footer />
                 </Providers>
             </body>
