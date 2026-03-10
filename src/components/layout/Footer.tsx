@@ -13,7 +13,7 @@ const footerLinks = {
       { label: "Brand OS", href: "https://staging.klarnow.ai" },
       { label: "Brand System", href: "https://brand.klarnow.co.uk/" },
       { label: "Custom Services", href: "/custom-services" },
-      { label: "Contact", href: "/contact" },
+      { label: "Fit Check", href: "/fit-check" },
     ],
   },
   legal: {
