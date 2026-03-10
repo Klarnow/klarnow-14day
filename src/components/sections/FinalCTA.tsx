@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, StepBack } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 
@@ -28,12 +28,17 @@ const FinalCTA = ({ title, subhead }: FinalCTAProps) => {
           <p className="text-body mb-8">
             Book a 60-Second Fit Check and we’ll show you what needs fixing first.
           </p>
-          <Button variant="hero" size="lg" asChild className="bg-foreground text-background hover:bg-foreground/90">
-            <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-              Call Now
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button variant="hero" size="lg" asChild className="bg-foreground text-background hover:bg-foreground/90">
+              <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
+                Call Now
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="hero-secondary" size="lg" asChild className="border-foreground/20 hover:bg-muted/30">
+              <a href="/fit-check">60-Second Fit Check</a>
+            </Button>
+          </div>
           <div className="text-xs text-foreground/60 mt-4 font-medium">
             See the AI Receptionist live on the call.
           </div>
@@ -45,3 +50,4 @@ const FinalCTA = ({ title, subhead }: FinalCTAProps) => {
 };
 
 export default FinalCTA;
+StepBack

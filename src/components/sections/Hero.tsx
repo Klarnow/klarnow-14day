@@ -33,7 +33,7 @@ const Hero = () => {
             </a>
           </Button>
           <Button variant="hero-secondary" size="lg" asChild>
-            <a href="/contact">60-Second Fit Check</a>
+            <a href="/fit-check">60-Second Fit Check</a>
           </Button>
         </div>
 
