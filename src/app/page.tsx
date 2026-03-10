@@ -8,7 +8,6 @@ import Results from "@/components/sections/Results";
 import Proof from "@/components/sections/Proof";
 import Enterprise from "@/components/sections/Enterprise";
 import FAQ from "@/components/sections/FAQ";
-import CustomServices from "@/components/sections/CustomServices";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 const Index = () => {
@@ -17,12 +16,11 @@ const Index = () => {
             <Hero />
             <Problem />
             <Roadmap />
+            <Proof />
             <Pricing />
             <Results />
-            <Proof />
             <Enterprise />
             <FAQ />
-            <CustomServices />
             <FinalCTA />
         </main>
     );
