@@ -100,10 +100,12 @@ const Footer = () => {
         </div>
       </div>
 
+
       {/* Spacer for mobile sticky bar */}
       <div className="h-20 lg:hidden" />
     </footer>
   );
 };
+
 
 export default Footer;
