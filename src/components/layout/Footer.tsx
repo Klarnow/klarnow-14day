@@ -48,7 +48,7 @@ const Footer = () => {
                 href={`tel:${PHONE_NUMBER}`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-background/20 text-sm font-medium text-background hover:border-background/40 transition-colors group"
               >
-                Call now
+                Call Now
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>

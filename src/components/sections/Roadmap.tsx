@@ -6,33 +6,29 @@ import { Check, Clock, Zap, Monitor  } from "lucide-react";
 
 const timelineItems = [
   {
-    title: "Leak map and build plan",
-    description: "We audit where enquiries are breaking down and map out what gets built.",
-    status: "Days 1–3",
+    title: "Map the leak. Plan the build.",
+    status: "Days 1 to 3",
     statusColor: "success",
     icon: Check,
     iconBg: "bg-success"
   },
   {
-    title: "Build and integration",
-    description: "We build your call-first page, install the Instant Receptionist, connect your booking system, and set up follow-up automation.",
-    status: "Days 4–11",
+    title: "Set up the receptionist, page, booking flow, and automations.",
+    status: "Days 4 to 11",
     statusColor: "warning",
     icon: Clock,
     iconBg: "bg-amber-500"
   },
   {
-    title: "Go-live (Traffic switch-on)",
-    description: "Your system goes live. Traffic starts hitting it. We monitor in real-time.",
+    title: "Go live.",
     status: "Day 12",
     statusColor: "muted",
     icon: Zap,
     iconBg: "bg-muted-foreground"
   },
   {
-    title: "Monitoring and handover",
-    description: "We watch performance, handle any issues, and hand over full control to you.",
-    status: "Days 13–14",
+    title: "Test, adjust, and hand over.",
+    status: "Days 13 to 14",
     statusColor: "muted",
     icon: Monitor,
     iconBg: "bg-muted-foreground"
@@ -50,12 +46,12 @@ const Roadmap = () => {
     >
       <div className="container-wide">
         <div className={cn("text-center mb-10 md:mb-14 scroll-fade-in", isVisible && "visible")}>
-          <p className="eyebrow mb-4">Roadmap</p>
+          <p className="eyebrow mb-4">How it works</p>
           <h2 className="heading-section heading-mixed mb-3">
-            What's <span className="serif-italic">next</span>
+            Live in 14 days
           </h2>
           <p className="text-body max-w-2xl mx-auto">
-            A mobile conversion page with one clear next step
+            You do not get dumped with software. You get a working setup.
           </p>
         </div>
 

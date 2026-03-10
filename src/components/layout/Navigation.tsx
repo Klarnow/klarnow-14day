@@ -81,7 +81,7 @@ const Navigation = () => {
                 href={`tel:${PHONE_NUMBER}`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-foreground/20 text-foreground hover:border-foreground/40 hover:bg-muted/30 transition-all"
               >
-                Call now
+                Call Now
                 <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -162,7 +162,7 @@ const Navigation = () => {
                 >
                   <Button variant="hero" size="default" className="w-full mt-3" asChild>
                     <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-2">
-                      Call now
+                      Call Now
                       <ArrowRight className="h-4 w-4" />
                     </a>
                   </Button>

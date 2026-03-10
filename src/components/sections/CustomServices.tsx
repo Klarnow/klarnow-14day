@@ -7,12 +7,11 @@ import { cn } from "@/lib/utils";
 const PHONE_NUMBER = "+441616960976";
 
 const services = [
-    { icon: MapPin, title: "Multi-location routing", description: "Route calls to specific teams." },
-    { icon: Database, title: "Custom CRM setup", description: "Reporting dashboards & pipelines." },
-    { icon: GitBranch, title: "Full funnel rebuilds", description: "Conversion testing & optimization." },
-    { icon: Share2, title: "Ad creative systems", description: "Content pipelines & systems." },
-    { icon: PieChart, title: "Sales restructuring", description: "Follow-up & process overhaul." },
-    { icon: Grid2X2, title: "Brand System", description: "Brand Strategy, Identity and positioning." },
+    { icon: MapPin, title: "Multi-location setups", description: "" },
+    { icon: Database, title: "CRM builds", description: "" },
+    { icon: PieChart, title: "Dashboards", description: "" },
+    { icon: GitBranch, title: "Funnel rebuilds", description: "" },
+    { icon: Share2, title: "Sales process support", description: "" },
 ];
 
 const CustomServices = () => {
@@ -28,19 +27,14 @@ const CustomServices = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start">
                     {/* Left Column */}
                     <div className={cn("min-w-0 scroll-fade-left", isVisible && "visible")}>
-                        <p className="eyebrow mb-4">Need Something More Complex?</p>
-                        <h2 className="heading-section heading-mixed mb-4">
-                            Custom <span className="serif-italic">Services</span>
+                        <p className="eyebrow mb-4">Need something more advanced?</p>
+                        <h2 className="heading-section heading-mixed mb-8">
+                            Custom builds for <br /><span className="serif-italic">more complex businesses</span>
                         </h2>
-                        <p className="text-body mb-4">
-                            For multi-location or deep automation needs. If your setup involves multiple teams, custom CRM builds, or full funnel rebuilds, start with Brand OS first.
-                        </p>
-                        <p className="text-body mb-8">
-                            When you're ready, call and ask about Custom Services.
-                        </p>
+                        
                         <Button variant="hero" size="default" asChild>
                             <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-                                Call now
+                                Ask About Custom Services
                                 <ArrowRight className="h-4 w-4" />
                             </a>
                         </Button>

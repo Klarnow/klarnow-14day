@@ -10,20 +10,20 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
     {
-        question: "Do I need ads for this to work?",
-        answer: "No. If you already have traffic from referrals, partnerships, organic content, or an existing audience, we plug the system into what you have and stop the leak. If you want more volume, we recommend ads—because once the leak is closed, ad spend becomes an investment, not a gamble."
+        question: "Do I need ads?",
+        answer: "No. This helps you handle the leads you already get."
     },
     {
-        question: "What does \"Traffic switch-on\" mean?",
-        answer: "Traffic is actively hitting your system when we go live on Day 12. That can be your existing traffic sources, paid ads, or both. If we use paid ads, you pay ad spend directly to the platform."
+        question: "Can I start with just the AI Receptionist?",
+        answer: "Yes. That is the easiest starting point."
     },
     {
-        question: "Can I start with just the Instant Receptionist?",
-        answer: "Yes. It's the fastest way to stop missed calls and book appointments automatically. You can add the full system later."
+        question: "What does installed in 14 days mean?",
+        answer: "We map, build, connect, test, and launch within 14 days."
     },
     {
-        question: "When do installs start?",
-        answer: "We run 4 install slots per month. Call now to confirm fit and lock in the next start date."
+        question: "What happens after install?",
+        answer: "You stay on the plan that fits your business and upgrade when needed."
     },
 ];
 

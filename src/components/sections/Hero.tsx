@@ -4,46 +4,41 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const PHONE_NUMBER = "+441616960976";
-const trustChips = ["Installed in 14 days", "4 slots per month", "See it live on the call"];
+const trustChips = ["Installed in 14 days", "Built for service businesses", "See it live on the call"];
 const Hero = () => {
   return <section className="relative hero-gradient min-h-[85vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 md:pt-20 md:pb-16 overflow-hidden">
     <div className="container-wide relative">
       <div className="max-w-3xl mx-auto text-center shadow-none my-0">
         {/* Eyebrow */}
-        {/* <p className="eyebrow mb-4 md:mb-6 animate-fade-in">Every enquiry get handled right</p> */}
+        <p className="eyebrow mb-4 md:mb-6 animate-fade-in">Klarnow for UK service businesses</p>
 
         {/* Main headline */}
         <h1 className="heading-display mt-[80px] md:mt-[100px] mb-4 md:mb-6 animate-fade-in-up left-align" style={{
           animationDelay: "0.1s"
         }}>
-          Every enquiry <br />
-          <span className=" gradient-text">  gets handled right.</span>
+          Stop losing <br />
+          <span className=" gradient-text">ready-to-buy leads.</span>
         </h1>
 
         {/* Sub-head */}
         <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 animate-fade-in-up leading-relaxed" style={{
           animationDelay: "0.2s"
-        }}>The 14-Day Call-First System that answers calls, books appointments and follows up when you're busy.  </p>
+        }}>We help service businesses answer faster, book easier, and follow up properly.</p>
 
         {/* Primary CTA */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 animate-fade-in-up" style={{
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10 md:mb-12 animate-fade-in-up" style={{
           animationDelay: "0.3s"
         }}>
           <Button variant="hero" size="lg" asChild>
             <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-              Call now
+              Call Now
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
-
+          <Button variant="hero-secondary" size="lg" asChild>
+            <a href="/contact">60-Second Fit Check</a>
+          </Button>
         </div>
-
-        {/* Micro text */}
-        <p className="text-xs md:text-sm text-muted-foreground mb-10 md:mb-12 animate-fade-in-up" style={{
-          animationDelay: "0.4s"
-        }}>
-          60-second Fit Check. We'll tell you what's breaking and when we can fix it.
-        </p>
 
         {/* Trust chips */}
         <div className="flex flex-wrap justify-center gap-2 mb-10 md:mb-14 animate-fade-in-up" style={{

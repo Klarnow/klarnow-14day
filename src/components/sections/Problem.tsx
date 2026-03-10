@@ -6,23 +6,23 @@ import { cn } from "@/lib/utils";
 const problems = [
   {
     icon: PhoneMissed,
-    title: "Calls go to voicemail",
-    description: "Calls during a job go straight to voicemail.",
+    title: "Missed calls",
+    description: "Leads ring. No one picks up.",
   },
   {
     icon: Clock,
-    title: "Evening enquiries wait",
-    description: "Evening enquiries sit until morning (they've already moved on).",
+    title: "Slow follow-up",
+    description: "Interest fades fast.",
   },
   {
     icon: UserX,
-    title: "Indecision",
-    description: "\"Just checking prices\" becomes \"I'll think about it\".",
+    title: "Lost bookings",
+    description: "Too much friction. No clear next step.",
   },
   {
     icon: Eye,
     title: "No visibility",
-    description: "You can't see what happened without chasing people down.",
+    description: "You do not know what got answered, booked, or lost.",
   },
 ];
 
@@ -39,13 +39,13 @@ const Problem = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start">
           {/* Left Column */}
           <div className={cn("max-w-md min-w-0 scroll-fade-left", isVisible && "visible")}>
-            <p className="eyebrow mb-4">The Problem</p>
+            <p className="eyebrow mb-4">The problem</p>
             <h2 className="heading-section mb-4">
-              You already do the hard part, getting people interested. <span className="serif-italic">If not,<br /> we help you.</span>
+              The lead came in. <br /><span className="serif-italic">The system failed.</span>
             </h2>
           
             <p className="text-body font-medium">
-              The problem isn't leads. It's <span className="serif-italic font-bold text-md">conversion</span> 
+              You do not need more attention if calls go unanswered, follow-up is slow, and bookings fall through.
             </p>
           </div>
 

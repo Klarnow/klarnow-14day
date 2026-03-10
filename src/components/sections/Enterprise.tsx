@@ -5,12 +5,10 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 
 const features = [
-  { icon: Database, title: "CRM Integration", description: "Connect systems" },
-  { icon: CheckCircle, title: "Live Checks", description: "Mid-call lookup" },
-  { icon: GitBranch, title: "Custom Workflows", description: "Match your process" },
-  { icon: Tag, title: "White Label", description: "Your brand" },
-  { icon: Puzzle, title: "Integrations", description: "CRM, email, SMS" },
-  { icon: Headphones, title: "Dedicated Support", description: "Direct line" },
+  { icon: Database, title: "Script updates", description: "Keep your AI matching your offers." },
+  { icon: GitBranch, title: "Routing changes", description: "Re-route calls anytime." },
+  { icon: CheckCircle, title: "Optimisation", description: "Improve conversion rates." },
+  { icon: Headphones, title: "Priority support", description: "Direct line for fast changes." },
 ];
 
 const Enterprise = () => {
@@ -26,15 +24,21 @@ const Enterprise = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left Column */}
           <div className={cn("scroll-fade-left", isVisible && "visible")}>
-            <p className="eyebrow mb-4">Enterprise</p>
+            <p className="eyebrow mb-4">Need hands-on support?</p>
             <h2 className="heading-section heading-mixed mb-4">
-              Need <span className="serif-italic">custom?</span>
+              Optional <span className="serif-italic">management</span>
             </h2>
             <p className="text-body mb-6">
-              Multi-location, high volume. Tailored call flows and integrations.
+              Add monthly management for:
             </p>
+            <ul className="space-y-2 mb-6 text-sm text-muted-foreground list-disc pl-5">
+              <li>script updates</li>
+              <li>routing changes</li>
+              <li>optimisation</li>
+              <li>priority support</li>
+            </ul>
             <Button variant="hero-secondary" size="default" className="group">
-              Learn more
+              Ask About Management
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Button>
           </div>

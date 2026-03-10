@@ -6,40 +6,41 @@ const PHONE_NUMBER = "+441616960976";
 
 export const pricingPackages = [
     {
-        name: "Instant Receptionist",
-        price: "£995",
-        bestFor: "You miss calls or lose after-hours enquiries.",
-        promise: "Stop the bleeding today.",
+        name: "Klarnow AI Receptionist",
+        price: "From £95/month",
+        bestFor: "Businesses missing calls, after-hours enquiries, and easy bookings.",
+        promise: "Answers calls. Handles bookings. Stops leads going cold.",
         features: [
-            "AI call agent installed and live",
-            "Answers, books, reschedules, cancels, handles FAQs",
-            "Routing rules and handover to you when needed"
-        ]
-    },
-    {
-        name: "14-Day System + Traffic",
-        price: "£2,795",
-        bestFor: "You want the full fix + launch support.",
-        promise: "Turn it on and scale it.",
-        features: [
-            "Everything in Instant Receptionist",
-            "Landing page or funnel page installed",
-            "Tracking and conversion events",
-            "Go-live (traffic switch-on) on Day 12",
-            "4 launch ad creatives"
+            "Instant call answering",
+            "Booking and rescheduling",
+            "Basic customer questions",
+            "One call flow",
+            "One calendar connection",
+            "Basic support"
         ],
-        featured: true
+        ctaText: "Start with AI Receptionist",
+        options: [
+            "24-month plan from £95/month",
+            "12-month plan from £145/month",
+            "Rolling monthly from £195/month"
+        ]
     },
     {
-        name: "System + Traffic + Pro Content",
-        price: "£3,995",
-        bestFor: "You're launching or relaunching properly.",
-        promise: "Launch like you mean it.",
+        name: "Klarnow 14-Day Call-First System",
+        price: "From £995/month",
+        bestFor: "Businesses that want the full system, not just call answering.",
+        promise: "The full lead capture and booking system, installed around your business.",
         features: [
-            "Everything in the £2,795 package",
-            "Professional shoot",
-            "12 edited clips for ads, conversion page and social"
-        ]
+            "AI Receptionist",
+            "Mobile-first landing page",
+            "Booking flow",
+            "Follow-up automation",
+            "Reminders and no-show recovery",
+            "Monthly support and improvements"
+        ],
+        ctaText: "Explore the 14-Day System",
+        featured: true,
+        options: []
     }
 ];
 
@@ -50,26 +51,26 @@ interface PricingCardsProps {
 export const PricingCards = ({ showCTA = true }: PricingCardsProps) => {
     return (
         <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {pricingPackages.map((pkg, i) => (
                     <div
                         key={i}
                         className={`card-premium p-6 sm:p-8 flex flex-col min-w-0 ${pkg.featured ? 'ring-1 ring-foreground relative' : ''}`}
                     >
                         {pkg.featured && (
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-foreground text-background text-sm font-medium rounded-full">
-                                Most Popular
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-foreground text-background text-sm font-medium rounded-full whitespace-nowrap">
+                                Built for Service Businesses
                             </div>
                         )}
 
                         <div className="mb-6">
                             <h3 className="text-xl font-bold mb-3">{pkg.name}</h3>
                             <div className="text-3xl font-bold mb-6">{pkg.price}</div>
-                            <p className="text-sm text-muted-foreground mb-3">
-                                {pkg.bestFor}
-                            </p>
-                            <p className="text-sm font-medium text-[hsl(262,83%,58%)]">
+                            <p className="text-sm font-medium text-[hsl(262,83%,58%)] mb-3">
                                 {pkg.promise}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Best for:</strong> {pkg.bestFor}
                             </p>
                         </div>
 
@@ -82,6 +83,17 @@ export const PricingCards = ({ showCTA = true }: PricingCardsProps) => {
                                     </li>
                                 ))}
                             </ul>
+                            
+                            {pkg.options && pkg.options.length > 0 && (
+                                <div className="mt-6 pt-6 border-t border-border/50">
+                                    <h4 className="text-sm font-bold mb-3">Plan options</h4>
+                                    <ul className="space-y-2">
+                                        {pkg.options.map((opt, k) => (
+                                            <li key={k} className="text-xs text-muted-foreground">{opt}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
                         </div>
 
                         {showCTA && (
@@ -92,7 +104,7 @@ export const PricingCards = ({ showCTA = true }: PricingCardsProps) => {
                                 asChild
                             >
                                 <a href={`tel:${PHONE_NUMBER}`}>
-                                    Get Started
+                                    {pkg.ctaText}
                                 </a>
                             </Button>
                         )}
@@ -100,12 +112,9 @@ export const PricingCards = ({ showCTA = true }: PricingCardsProps) => {
                 ))}
             </div>
 
-            <div className="mt-12 max-w-6xl mx-auto p-6 rounded-xl space-y-2 text-center">
+            <div className="mt-12 max-w-4xl mx-auto p-6 rounded-xl space-y-2 text-center">
                 <p className="text-sm text-muted-foreground">
-                    <strong>Note:</strong> Software subscriptions and ad spend are paid by you directly.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                    <strong>Installation guarantee:</strong> If we can't deliver your system in 14 days, you don't pay.
+                    <strong>Note:</strong> Software subscriptions and any ad spend are paid by you directly.
                 </p>
             </div>
         </>

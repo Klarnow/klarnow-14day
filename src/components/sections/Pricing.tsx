@@ -18,12 +18,13 @@ const Pricing = () => {
     >
       <div className="container-wide">
         <div className={cn("text-center mb-10 md:mb-14 scroll-fade-in", isVisible && "visible")}>
-          <p className="eyebrow mb-4">Pricing</p>
+          <p className="eyebrow mb-4">What Klarnow installs</p>
           <h2 className="heading-section heading-mixed mb-3">
-            Three installs. <span className="serif-italic">One outcome.</span>
+            Two ways to fix the leak
           </h2>
           <p className="text-body max-w-2xl mx-auto">
-            Pick your entry point. Every option stops the leak.
+            Start with the AI Receptionist.<br />
+            Upgrade to the full system when you need more.
           </p>
         </div>
 
@@ -36,7 +37,7 @@ const Pricing = () => {
         <div className={cn("text-center mt-10 scroll-fade-in", isVisible && "visible")} style={{ transitionDelay: "500ms" }}>
           <Button variant="hero" size="lg" asChild>
             <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
-              Call now
+              Call Now
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
