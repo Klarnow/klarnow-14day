@@ -11,28 +11,22 @@ import jsLogo from "@/assets/jslogo.png";
 
 const baseTestimonials = [
     {
-        content: "I only answered a few questions and they completely rebuilt my conversion system. I was honestly shocked. It’s now helping us bring in clients and even attract recruits at the same time. They saw things in my business that I didn’t even see myself.",
+        content: "Before Klarnow, too many enquiries were slipping through the cracks. Now calls get answered faster, bookings happen easier, and the follow-up is far more organised.",
         name: "ValueCare",
-        role: "Client",
+        role: "Service Provider",
         logoSrc: valuecareLogo
     },
     {
-        content: "I came in as a client, but after seeing the level of work and care they put into my campaigns, it turned into something more long-term. We’re now on retainer and running multiple campaigns together. I genuinely trust them with my brand.",
+        content: "The biggest difference was speed. Leads were no longer sitting there waiting. We finally had a proper system for handling what came in.",
         name: "IACW",
-        role: "Client",
+        role: "Business Owner",
         logoSrc: iacwLogo
     },
     {
-        content: "What I appreciate most is that everything was structured and intentional. It wasn’t guesswork. It was a proper system with clear stages and follow-up. That’s what made the difference.",
+        content: "It stopped feeling random. We had a clearer process, fewer missed opportunities, and better visibility on what was actually happening.",
         name: "ProjectCareer",
-        role: "Client",
+        role: "Operations Manager",
         logoSrc: projectcareerLogo
-    },
-    {
-        content: "We needed to move fast, and they delivered. Within 14 days we had a proper conversion page live and we’re already taking orders through it. It felt organised, focused, and very intentional.",
-        name: "JS Healthy Living",
-        role: "Client",
-        logoSrc: jsLogo
     }
 ];
 

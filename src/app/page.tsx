@@ -7,6 +7,7 @@ import Roadmap from "@/components/sections/Roadmap";
 import Results from "@/components/sections/Results";
 import Proof from "@/components/sections/Proof";
 import Enterprise from "@/components/sections/Enterprise";
+import CustomServices from "@/components/sections/CustomServices";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
@@ -21,6 +22,7 @@ const Index = () => {
             <Results />
             <Enterprise />
             <FAQ />
+            <CustomServices />
             <FinalCTA />
         </main>
     );

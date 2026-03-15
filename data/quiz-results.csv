@@ -1,0 +1,7 @@
+timestamp,business_type,enquiry_volume,lead_sources,biggest_leak,desired_setup,readiness,fit_result,priority
+2026-03-14T21:30:55.156Z,"Barber / Salon","0 to 5","WhatsApp","Slow follow-up","Full 14-Day Call-First System","Ready now","C","normal"
+2026-03-14T21:32:43.500Z,"Barber / Salon","6 to 15","WhatsApp","Slow follow-up","Full 14-Day Call-First System","Ready now","C","normal"
+2026-03-14T21:33:23.388Z,"Barber / Salon","6 to 15","WhatsApp","Slow follow-up","Full 14-Day Call-First System","Ready now","C","normal"
+2026-03-14T21:34:50.741Z,"Barber / Salon","6 to 15","Phone calls","Missed calls","AI Receptionist","Ready now","B","normal"
+2026-03-14T21:37:45.871Z,"Barber / Salon","0 to 5","Phone calls | WhatsApp","Slow follow-up","Full 14-Day Call-First System","Within 30 days","C","normal"
+2026-03-14T21:42:15.261Z,"Restaurant / Hospitality","0 to 5","Phone calls","Slow follow-up","Full 14-Day Call-First System","Within 30 days","C","normal"

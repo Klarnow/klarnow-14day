@@ -9,8 +9,13 @@ const Hero = () => {
   return <section className="relative hero-gradient min-h-[85vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 md:pt-20 md:pb-16 overflow-hidden">
     <div className="container-wide relative">
       <div className="max-w-3xl mx-auto text-center shadow-none my-0">
+        {/* Subtitle */}
+        <p className="eyebrow mb-4 animate-fade-in-up" style={{ animationDelay: "0.05s" }}>
+          Klarnow for UK service businesses
+        </p>
+
         {/* Main headline */}
-        <h1 className="heading-display mt-[80px] md:mt-[100px] mb-4 md:mb-6 animate-fade-in-up left-align" style={{
+        <h1 className="heading-display mb-4 md:mb-6 animate-fade-in-up left-align" style={{
           animationDelay: "0.1s"
         }}>
           Stop losing <br />
