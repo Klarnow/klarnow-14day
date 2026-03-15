@@ -79,7 +79,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href={`tel:${PHONE_NUMBER}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-foreground/20 text-foreground hover:border-foreground/40 hover:bg-muted/30 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-base font-medium border border-foreground/20 text-foreground hover:border-foreground/40 hover:bg-muted/30 transition-all"
               >
                 Call Now
                 <ArrowRight className="h-3.5 w-3.5" />
