@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, StepBack } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 
@@ -19,29 +19,34 @@ const FinalCTA = ({ title, subhead }: FinalCTAProps) => {
       ref={ref as React.RefObject<HTMLElement>}
       className="relative overflow-hidden"
     >
-      <div className={cn("hero-gradient py-16 md:py-24 flex items-center justify-center scroll-fade-in", isVisible && "visible")}>
-        <div className="text-center px-5 max-w-2xl mx-auto">
-          <p className="eyebrow mb-4">Ready to see what is leaking?</p>
+      <div className={cn("hero-gradient py-20 md:py-32 flex items-center justify-center scroll-fade-in", isVisible && "visible")}>
+        <div className="text-center px-5 max-w-3xl mx-auto">
+          <p className="eyebrow mb-6">FINAL STEP</p>
           <h2 className="heading-section mb-6">
-            Let’s find the gap in your lead flow.
+            Ready to see what is slowing <br />
+            <span className="serif-italic">your lead flow down?</span>
           </h2>
-          <p className="text-body mb-8">
-            Book a 60-Second Fit Check and we’ll show you what needs fixing first.
+          <p className="text-body mb-10 max-w-2xl mx-auto font-medium">
+            Book a 60-Second Fit Check and we will show you where growth is leaking,
+            what is getting missed, and what Klarnow should fix first.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button variant="hero" size="lg" asChild className="bg-foreground text-background hover:bg-foreground/90">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="hero" size="lg" asChild className="bg-primary hover:bg-primary/90 min-w-[200px]">
               <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
                 Call Now
+              </a>
+            </Button>
+            <Button variant="hero-secondary" size="lg" asChild className="border-primary/20 hover:bg-primary/5 min-w-[200px]">
+              <a href="/fit-check" className="flex items-center gap-2">
+                60-Second Fit Check
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
-            <Button variant="hero-secondary" size="lg" asChild className="border-foreground/20 hover:bg-muted/30">
-              <a href="/fit-check">60-Second Fit Check</a>
-            </Button>
           </div>
-          <div className="text-xs text-foreground/60 mt-4 font-medium">
+          <p className="text-sm text-foreground/60 mt-8 font-bold uppercase tracking-widest">
             See the AI Receptionist live on the call.
-          </div>
+          </p>
         </div>
       </div>
     </section>
@@ -50,4 +55,3 @@ const FinalCTA = ({ title, subhead }: FinalCTAProps) => {
 };
 
 export default FinalCTA;
-StepBack

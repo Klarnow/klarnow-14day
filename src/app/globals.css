@@ -243,7 +243,7 @@
 
   /* Typography - Modern with Serif Accents */
   .heading-display {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1];
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1];
   }
 
   .heading-section {
@@ -255,11 +255,11 @@
   }
 
   .text-body {
-    @apply text-sm md:text-base text-muted-foreground leading-relaxed;
+    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
   }
 
   .eyebrow {
-    @apply text-sm md:text-base font-serif italic text-muted-foreground;
+    @apply text-base md:text-lg font-serif italic text-muted-foreground;
   }
 
   /* Soft gradient hero background */

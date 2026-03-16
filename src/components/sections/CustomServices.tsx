@@ -47,7 +47,7 @@ const CustomServices = () => {
                                 <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center mb-3">
                                     <service.icon className="h-4 w-4 text-foreground" />
                                 </div>
-                                <h3 className="font-semibold text-foreground text-sm mb-1">{service.title}</h3>
+                                <span className="text-base font-bold text-foreground">{service.title}</span>
                                 <p className="text-xs text-muted-foreground">{service.description}</p>
                             </div>
                         ))}
